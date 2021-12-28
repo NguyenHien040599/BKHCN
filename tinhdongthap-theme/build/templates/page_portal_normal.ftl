@@ -60,6 +60,7 @@
         window.__require = undefined;
     </script>
 	<!-- Begin Tracking OpenCps -->
+	<!-- thongketruycap -->
 	<script type="text/javascript">
 		var _paq = window._paq = window._paq || [];
 		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -69,6 +70,7 @@
 		  var u="//thongke.opencps.vn/";
 		  _paq.push(['setTrackerUrl', u+'matomo.php']);
 		  _paq.push(['setSiteId', '5']);
+			// _paq.push(['setSiteId', '6']);	
 		  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 		  g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
 		})();
@@ -76,6 +78,7 @@
 	<!-- End Tracking OpenCps -->
 
 	<!-- Begin EMC Tracking Code -->
+	<!-- thongketruycap -->
     <script type="text/javascript">
         var _govaq = window._govaq || [];
 		_govaq.push(['trackPageView']);
@@ -83,6 +86,7 @@
 		(function () {
 			_govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
 			_govaq.push(['setSiteId', '33']);
+			// _govaq.push(['setSiteId', '163']);
 			var d = document,
 				g = d.createElement('script'),
 				s = d.getElementsByTagName('script')[0];
@@ -234,9 +238,11 @@
 	<!--<a href="/web/cong-dich-vu-cong-tinh-dong-thap" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a>-->
 		
 	<!-- inject:js -->
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=31241231239999"></script>
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=31241231239999"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=31241231239999"></script>
+	
 	<script>
+		// thongketruycap
 		var settingsGetTracking = {
 			"url": "https://thongke.opencps.vn",
 			"method": "GET",
@@ -250,6 +256,15 @@
 				"format": "JSON",
 				"token_auth": "1811b03abf29e86ee2532678d70b31b0"
 			}
+			// 
+			// "data": {
+			// 	"module": "API",
+			// 	"method": "Live.getCounters",
+			// 	"idSite": "6",
+			// 	"lastMinutes": "1",
+			// 	"format": "JSON",
+			// 	"token_auth": "1811b03abf29e86ee2532678d70b31b0"
+			// }
 		};
 		var getTracking = function () {
 			// $.ajax(settingsGetTracking ).done(function (response) {
@@ -267,7 +282,9 @@
 				} catch (error) {
 				}
 			});
+			// thongketruycap
 			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=5&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
+			// xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=6&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
 			xhr.send()
 		}
 		setTimeout(function () {

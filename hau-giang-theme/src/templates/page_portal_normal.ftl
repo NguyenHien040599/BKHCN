@@ -21,7 +21,7 @@
 	<!--<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888" rel="stylesheet" type="text/css">-->
 	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=666" rel="stylesheet" type="text/css">
 	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=1789987" rel="stylesheet">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=178931312387" rel="stylesheet">
 
 	<script>
         window.__define = window.define;
@@ -126,9 +126,12 @@
 		var checkTrungChuHoSo = false; /*bật check trùng chủ hồ sơ có hồ sơ đang giải quyết*/
 		var fromViaPostalConfig = true; /*check xác nhận là hồ sơ nhận qua bưu chính*/
 		var activePdfEditor = false; /*sử dụng chức năng ghi chú trên tài liệu Pdf*/
-		var viTriLuuTru = false; /*sử dụng chức năng vị trí lưu trữ hồ sơ*/;
+		var viTriLuuTru = false; /*sử dụng chức năng vị trí lưu trữ hồ sơ*/
 		var traCuuLgspCongDan = true;
-		var requiredEform = true
+		var traCuuLgspDoanhNghiep = true;
+		var requiredEform = true;
+		var checkAccSso = true;
+		var truCuuAi = true
 	</script>
 	<!-- end -->
 </head>
@@ -238,8 +241,8 @@
 	<!-- <a href="/web/cong-dich-vu-cong-tinh-hau-giang" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a> -->
 		
 	<!-- inject:js -->
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=9831324231555"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=9831242331555"></script>
 	<script>
 		var settingsGetTracking = {
 			"url": "https://thongke.opencps.vn",

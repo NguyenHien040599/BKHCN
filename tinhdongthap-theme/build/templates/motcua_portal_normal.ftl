@@ -32,7 +32,7 @@
         window.require = undefined;
     </script>
 	
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js?t=93123123"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js"></script>
@@ -69,8 +69,8 @@
 		(function() {
 		  var u="//thongke.opencps.vn/";
 		  _paq.push(['setTrackerUrl', u+'matomo.php']);
-		//   _paq.push(['setSiteId', '6']);
-		  _paq.push(['setSiteId', '5']);
+		  _paq.push(['setSiteId', '6']);
+		//   _paq.push(['setSiteId', '5']);
 		  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 		  g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
 		})();
@@ -85,8 +85,8 @@
 		_govaq.push(['enableLinkTracking']);
 		(function () {
 			_govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
-			// _govaq.push(['setSiteId', '163']);
-			_govaq.push(['setSiteId', '33']);
+			_govaq.push(['setSiteId', '163']);
+			// _govaq.push(['setSiteId', '33']);
 			var d = document,
 				g = d.createElement('script'),
 				s = d.getElementsByTagName('script')[0];
@@ -215,23 +215,6 @@
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=312412312399999"></script>
 	<script>
 		// thongketruycap
-		// var settingsGetTracking = {
-		// 	"url": "https://thongke.opencps.vn",
-		// 	"method": "GET",
-		// 	"headers": {
-		// 	},
-		// 	"data": {
-		// 		"module": "API",
-		// 		"method": "Live.getCounters",
-		// 		"idSite": "6",
-		// 		"lastMinutes": "1",
-		// 		"format": "JSON",
-		// 		"token_auth": "1811b03abf29e86ee2532678d70b31b0"
-		// 	}
-		// };
-
-		// 
-
 		var settingsGetTracking = {
 			"url": "https://thongke.opencps.vn",
 			"method": "GET",
@@ -240,12 +223,29 @@
 			"data": {
 				"module": "API",
 				"method": "Live.getCounters",
-				"idSite": "5",
+				"idSite": "6",
 				"lastMinutes": "1",
 				"format": "JSON",
 				"token_auth": "1811b03abf29e86ee2532678d70b31b0"
 			}
 		};
+
+		// 
+
+		// var settingsGetTracking = {
+		// 	"url": "https://thongke.opencps.vn",
+		// 	"method": "GET",
+		// 	"headers": {
+		// 	},
+		// 	"data": {
+		// 		"module": "API",
+		// 		"method": "Live.getCounters",
+		// 		"idSite": "5",
+		// 		"lastMinutes": "1",
+		// 		"format": "JSON",
+		// 		"token_auth": "1811b03abf29e86ee2532678d70b31b0"
+		// 	}
+		// };
 		var getTracking = function () {
 			// $.ajax(settingsGetTracking ).done(function (response) {
 			// 	if (response && response[0] && response[0].hasOwnProperty('visitors')) {

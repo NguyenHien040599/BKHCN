@@ -54,6 +54,7 @@
     </script>
 	
 	<!-- Begin Tracking OpenCps -->
+	<!-- thongketruycap -->
 	<script type="text/javascript">
 		var _paq = window._paq = window._paq || [];
 		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -62,7 +63,8 @@
 		(function() {
 		  var u="//thongke.opencps.vn/";
 		  _paq.push(['setTrackerUrl', u+'matomo.php']);
-		  _paq.push(['setSiteId', '3']);
+		//   _paq.push(['setSiteId', '3']);
+			_paq.push(['setSiteId', '2']);
 		  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 		  g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
 		})();
@@ -70,13 +72,15 @@
 	<!-- End Tracking OpenCps -->
 	
 	<!-- Begin Gov Tracking Code -->
+	<!-- thongketruycap -->
 		<script type="text/javascript">
 			var _govaq = window._govaq || [];
 		_govaq.push(['trackPageView']);
 		_govaq.push(['enableLinkTracking']);
 		(function () {
 			_govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
-			_govaq.push(['setSiteId', '95']);
+			// _govaq.push(['setSiteId', '95']);
+			_govaq.push(['setSiteId', '94']);
 			var d = document,
 				g = d.createElement('script'),
 				s = d.getElementsByTagName('script')[0];
@@ -221,7 +225,7 @@
 			">
 				<div class="owner mb-1"><b>Cơ quan chủ quản:</b> UBND tỉnh Hậu Giang</div>
 				<p class="mb-1"><b>Tổng đài giải đáp tự động:</b> 1900 86 68 95</p>
-				<p class="mb-1"><b>Hướng dẫn sử dụng:</b> 0246.6822443</p>
+				<!-- <p class="mb-1"><b>Hướng dẫn sử dụng:</b> 0246.6822443</p> -->
 				<p class="mb-1"><b>Tiếp nhận phản ánh:</b> 0293.3554567</p>
 				<p class=""><b>Email:</b> dichvucong@haugiang.gov.vn</p>
 				<div style="
@@ -243,6 +247,7 @@
 	<!-- inject:js -->
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=9831324231555"></script>
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=9831242331555"></script>
+	<!-- thongketruycap -->
 	<script>
 		var settingsGetTracking = {
 			"url": "https://thongke.opencps.vn",
@@ -252,7 +257,8 @@
 			"data": {
 				"module": "API",
 				"method": "Live.getCounters",
-				"idSite": "3",
+				// "idSite": "3",
+				"idSite": "2",
 				"lastMinutes": "3",
 				"format": "JSON",
 				"token_auth": "bc959a4604e178dd1cf61e5d9ab7b2b7"
@@ -274,7 +280,8 @@
 				} catch (error) {
 				}
 			});
-			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=3&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
+			// xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=3&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
+			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=2&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
 			xhr.send()
 		}
 		setTimeout(function () {

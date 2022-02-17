@@ -111,7 +111,7 @@
 
 		<footer id="footer">
 			<div class="left">
-				<p class="site-name">Cổng Dịch vụ công trực tuyến và một cửa điện tử - Bộ xây dựng</p>
+				<p class="site-name">Hệ thống thông tin giải quyết thủ tục hành chính - Bộ xây dựng</p>
 				<p class="info-wrapper">
 					<span>Địa chỉ: 37 Lê Đại Hành, quận Hai Bà Trưng, thành phố Hà Nội</span>
 					<span style="display: flex;">
@@ -304,8 +304,9 @@
 		}
 	</style>
 	
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
+	
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
 
 	<@liferay_util["include"] page=body_bottom_include />
 	<@liferay_util["include"] page=bottom_include />

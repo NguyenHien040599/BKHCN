@@ -30,7 +30,7 @@
 	
 	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js?t=93123123"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js"></script>
 	
 	<script>

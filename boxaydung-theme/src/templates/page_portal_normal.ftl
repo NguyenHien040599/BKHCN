@@ -139,7 +139,7 @@
 				<a href="${site_default_url}"> 
 					<img src="${themeDisplay.getPathThemeRoot()}/images/logo.png"> 
 					<div class="text-logo"> 
-						Cổng Dịch vụ công trực tuyến và một cửa điện tử
+						Hệ thống thông tin giải quyết thủ tục hành chính
 						<br/>
 						<span>Bộ Xây dựng</span>
 					</div> 
@@ -158,7 +158,7 @@
 
 		<footer id="footer" >
 			<div class="left">
-				<p class="site-name">Cổng Dịch vụ công trực tuyến và một cửa điện tử - Bộ xây dựng</p>
+				<p class="site-name">Hệ thống thông tin giải quyết thủ tục hành chính - Bộ xây dựng</p>
 				<p class="info-wrapper">
 					<span>Địa chỉ: 37 Lê Đại Hành, quận Hai Bà Trưng, thành phố Hà Nội</span>
 					<span style="display: flex;">
@@ -195,8 +195,8 @@
 	
 	
 	<!-- inject:js -->
+		<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
 		<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
-<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
 		<#if permissionChecker.isOmniadmin()>
 			<@liferay_util["include"] page=body_bottom_include />
 			<@liferay_util["include"] page=bottom_include />
@@ -207,7 +207,6 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			<!-- //Back to top -->
 			var offset = 300,
 				scroll_top_duration = 600;
 				$back_to_top = $('.btt');
@@ -219,7 +218,7 @@
 				( $(this).scrollTop() > offset ) ? $back_to_top.addClass('btt-is-visible') : $back_to_top.removeClass('btt-is-visible');
 				( $(this).scrollTop() > offset ) ? $back_to_home.addClass('btt-is-visible') : $back_to_home.removeClass('btt-is-visible');
 			});
-			<!-- //Smooth scroll to top -->
+			
 			$back_to_top.on('click', function(event){
 				event.preventDefault();
 				$('body,html').animate({

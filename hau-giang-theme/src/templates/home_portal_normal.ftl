@@ -99,7 +99,7 @@
 			">
 				<div class="owner mb-1"><b>Cơ quan chủ quản:</b> UBND tỉnh Hậu Giang</div>
 				<p class="mb-1"><b>Tổng đài giải đáp tự động:</b> 1900 86 68 95</p>
-				<p class="mb-1"><b>Hướng dẫn sử dụng:</b> 0246.6822443</p>
+				<!-- <p class="mb-1"><b>Hướng dẫn sử dụng:</b> 0246.6822443</p> -->
 				<p class="mb-1"><b>Tiếp nhận phản ánh:</b> 0293.3554567</p>
 				<p class=""><b>Email:</b> dichvucong@haugiang.gov.vn</p>
 				<div style="
@@ -119,6 +119,7 @@
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
 	<script>
+		// thongketruycap
 		var settingsGetTracking = {
 			"url": "https://thongke.opencps.vn",
 			"method": "GET",
@@ -127,7 +128,8 @@
 			"data": {
 				"module": "API",
 				"method": "Live.getCounters",
-				"idSite": "3",
+				// "idSite": "3",
+				"idSite": "2",
 				"lastMinutes": "1",
 				"format": "JSON",
 				"token_auth": "bc959a4604e178dd1cf61e5d9ab7b2b7"
@@ -142,7 +144,8 @@
 				} catch (error) {
 				}
 			});
-			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=3&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
+			// xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=3&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
+			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=2&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
 			xhr.send()
 		}
 		setTimeout(function () {

@@ -43,7 +43,7 @@
 	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=02032022"></script>
 	
 	<script>
         window.define = window.__define;
@@ -111,6 +111,7 @@
 		var activePdfEditor = false; /*sử dụng chức năng ghi chú trên tài liệu Pdf*/
 		var viTriLuuTru = false; /*sử dụng chức năng vị trí lưu trữ hồ sơ*/;
 		var yeuCauSoHoa = true;
+		var showKySoMotCua = true
 	</script>
 	<!-- end -->
 </head>
@@ -669,6 +670,15 @@
 		
 		body.page-theme .deactive__btn {
 			background-color: #0d7535 !important;
+		}
+		/*  */
+		.yhy-append-wrap {
+			position: fixed !important;
+			left: 0;
+			bottom: 0;
+		}
+		#footer {
+			padding-bottom: 30px !important;
 		}
 	</style>
 	

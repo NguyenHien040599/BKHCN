@@ -43,8 +43,12 @@
 	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=931412312"></script>
 	<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+
+	<script src="${themeDisplay.getPathThemeRoot()}/js/trumbowyg.min.js?t=123"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vue-trumbowyg.js?t=123"></script>
+    <script src="${themeDisplay.getPathThemeRoot()}/js/jquery.jexcel.js"></script>
 	
 	<script>
         window.define = window.__define;
@@ -62,8 +66,8 @@
 		(function() {
 		  var u="//thongke.opencps.vn/";
 		  _paq.push(['setTrackerUrl', u+'matomo.php']);
-		//   _paq.push(['setSiteId', '3']);
-		_paq.push(['setSiteId', '2']);
+		  _paq.push(['setSiteId', '3']);
+		// _paq.push(['setSiteId', '2']);
 		  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 		  g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
 		})();
@@ -78,8 +82,8 @@
 	_govaq.push(['enableLinkTracking']);
 	(function () {
 		_govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
-		// _govaq.push(['setSiteId', '95']);
-		_govaq.push(['setSiteId', '94']);
+		_govaq.push(['setSiteId', '95']);
+		// _govaq.push(['setSiteId', '94']);
 		var d = document,
 			g = d.createElement('script'),
 			s = d.getElementsByTagName('script')[0];
@@ -94,6 +98,7 @@
 
 	<!-- Config Scope -->
 	<script type="text/javascript">
+		var versionCode = "9876543212";
 		var activeChangePass = true; /* disable change password employee*/
 		var requiredOptionConfig = {
 			applicantIdNo: false,
@@ -134,7 +139,8 @@
 		var traCuuLgspDoanhNghiep = true;
 		var requiredEform = true;
 		var checkAccSso = false;
-		var truCuuAi = true
+		var truCuuAi = true;
+		var showKySoMotCua = true
 	</script>
 	<!-- end -->
 </head>
@@ -212,8 +218,9 @@
 	
 	<a href="" class="btt"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>		
 	<!-- inject:js -->
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=9831324231555"></script>
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=9831242313555"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=9836132423"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=98361242313666"></script>
+	
 	<!--  -->
 	<!-- thongketruycap -->
 	<script>
@@ -225,8 +232,8 @@
 			"data": {
 				"module": "API",
 				"method": "Live.getCounters",
-				// "idSite": "3",
-				"idSite": "2",
+				"idSite": "3",
+				// "idSite": "2",
 				"lastMinutes": "1",
 				"format": "JSON",
 				"token_auth": "bc959a4604e178dd1cf61e5d9ab7b2b7"
@@ -248,8 +255,8 @@
 				} catch (error) {
 				}
 			});
-			// xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=3&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
-			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=2&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
+			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=3&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
+			// xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=2&lastMinutes=3&format=JSON&token_auth=bc959a4604e178dd1cf61e5d9ab7b2b7")
 			xhr.send()
 		}
 		setTimeout(function () {

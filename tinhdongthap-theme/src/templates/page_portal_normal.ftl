@@ -19,12 +19,15 @@
 	<@liferay_util["include"] page=top_head_include />
 	
 	<base href="/">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888" rel="stylesheet" type="text/css">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8812312388" rel="stylesheet" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888125553123" rel="stylesheet" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=82183183138123" rel="stylesheet" type="text/css">
 	<link href="${themeDisplay.getPathThemeRoot()}/css/bootstrap-glyphicons.css" rel="stylesheet" type="text/css">
 	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123323121" rel="stylesheet">
 	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=173892987" rel="stylesheet">
-
+	<!--  -->
+	<link href="${themeDisplay.getPathThemeRoot()}/css/toolbar.css?t=789312393817" rel="stylesheet" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/pdf_viewer.css?t=789313321987" rel="stylesheet" type="text/css">
+	<!--  -->
 	<script>
         window.__define = window.define;
         window.__require = window.require;
@@ -44,9 +47,13 @@
 	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
 	<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+	<!-- pdf editor -->
+	<script src="${themeDisplay.getPathThemeRoot()}/js/pdf-ann.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/pdf_viewer.js?t=98312412"></script>
+	<!--  -->
 	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js?t=8888"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=9381412312"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/function-vtca.min.js"></script>
 
 	<script src="${themeDisplay.getPathThemeRoot()}/js/trumbowyg.min.js?t=123"></script>
@@ -135,7 +142,7 @@
 		var hasDownloadAllFile = false; /*sử dụng chức năng download tất cả giấy tờ đính kèm*/
 		var checkTrungChuHoSo = false; /*bật check trùng chủ hồ sơ có hồ sơ đang giải quyết*/
 		var fromViaPostalConfig = true; /*check xác nhận là hồ sơ nhận qua bưu chính*/
-		var activePdfEditor = false; /*sử dụng chức năng ghi chú trên tài liệu Pdf*/
+		var activePdfEditor = true; /*sử dụng chức năng ghi chú trên tài liệu Pdf*/
 		var viTriLuuTru = false; /*sử dụng chức năng vị trí lưu trữ hồ sơ*/
 		var traCuuLgspCongDan = true;
 		var systemLgspConfig = "DongThap"
@@ -256,7 +263,7 @@
 			// 	"format": "JSON",
 			// 	"token_auth": "1811b03abf29e86ee2532678d70b31b0"
 			// }
-			// 
+			
 			"data": {
 				"module": "API",
 				"method": "Live.getCounters",
@@ -296,7 +303,8 @@
 		<@liferay_util["include"] page=bottom_include />
 	</#if>
 	<!-- endinject -->
-	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf.js?t=9991"></script>
+	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/annotation-index.js?t=31923138123213"></script>
+	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf.js?t=31923138123213"></script>
 	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf-table-extractor.js?t=9991"></script>
 
 	<script type="text/javascript">		
@@ -345,10 +353,7 @@
 		
 		
 		window.PDFJS.workerSrc = '${themeDisplay.getPathThemeRoot()}/js/pdf.worker.js?t=9991';
-	    $.ajaxSetup({
-			headers: {"Token": Liferay.authToken},
-			global: true
-		});
+	    $.ajaxSetup({headers:{"Token":Liferay.authToken,"groupId":themeDisplay.getScopeGroupId()},global:true});
 		
 		if (!window.themeDisplay.isSignedIn()) {$(".login-wrapper").css("display","none")}
 	</script>
@@ -1132,6 +1137,9 @@
 			}
 			}
 		/*  */
+		.yhy-append-wrap {
+			display: none !important;
+		}
 	</style>
 	
 	<!--<script type="text/javascript">

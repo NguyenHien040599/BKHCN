@@ -116,6 +116,9 @@
 		var showOptionName = true;
 		var urlFileHdsdKhoDienTu = "https://motcua.mt.gov.vn/documents/35166/0/T%C3%A0i+li%E1%BB%87u+HDSD+s%E1%BB%91+h%C3%B3a+KQ+TTHC.pdf?t=1634544058979";
 		var doActionGroupNew = true;
+		var traCuuLgspCongDan = true;
+		var systemLgspConfig = "BO-GTVT";
+		var checkThuTucTraCuuCsdlConfig = true
 	</script>
 	<!-- end -->
 </head>
@@ -217,8 +220,8 @@
 		</div>
 	</footer>
 <!-- inject:js -->
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
 	<#if permissionChecker.isOmniadmin()>
 		<@liferay_util["include"] page=body_bottom_include />
 		<@liferay_util["include"] page=bottom_include />

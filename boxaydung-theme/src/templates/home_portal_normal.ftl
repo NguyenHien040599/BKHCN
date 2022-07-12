@@ -302,6 +302,15 @@
 		.home-theme #navigation a[href*="huong-dan-su-dung-opencps"] {
 			display: none;
 		}
+		/*  */
+		.yhy-append-wrap {
+			position: fixed !important;
+			left: 0;
+			bottom: 0;
+		}
+		#footer {
+			padding-bottom: 30px !important;
+		}
 	</style>
 	
 	

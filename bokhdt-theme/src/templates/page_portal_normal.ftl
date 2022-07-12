@@ -51,6 +51,25 @@
         window.__define = undefined;
         window.__require = undefined;
     </script>
+	<!-- Begin EMC Tracking Code -->
+    <script type="text/javascript">
+        var _govaq = window._govaq || [];
+		_govaq.push(['trackPageView']);
+		_govaq.push(['enableLinkTracking']);
+		(function () {
+			_govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
+			_govaq.push(['setSiteId', '166']);
+			var d = document,
+				g = d.createElement('script'),
+				s = d.getElementsByTagName('script')[0];
+			g.type = 'text/javascript';
+			g.async = true;
+			g.defer = true;
+			g.src = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
+			s.parentNode.insertBefore(g, s);
+		})();
+		</script>
+	<!-- End EMC Tracking Code -->
 </head>
 
 <body class="${css_class} page-theme">
@@ -190,6 +209,11 @@
 	</script>
 	
 	<style>
+		.yhy-append-wrap {
+			display: inline-block !important;
+			position: fixed !important;
+			bottom: 0 !important;
+		}
 		body #reAssign {
 			display: none;
 		}

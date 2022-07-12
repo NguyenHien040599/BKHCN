@@ -487,6 +487,9 @@
 			}
 			}
 		/*  */
+		.yhy-append-wrap {
+			display: none !important;
+		}
 	</style>
 	
 	<script>

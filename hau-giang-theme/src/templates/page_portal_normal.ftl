@@ -43,7 +43,7 @@
 	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=9312231"></script>
 	<script src="https://sp.zalo.me/plugins/sdk.js"></script>
 	
 	<script>
@@ -168,7 +168,7 @@
 					<div id="app_login"></div>
 				</div>
 				<a href="/c/portal/login" class="btn-banner btn-login-motcua">Đăng nhập</a>
-				<a href="#" onclick="loginDvcqg()" class="btn-banner btn-login-dvc">Đăng nhập</a>
+				<a href="javascript:;" onclick="luaChonDangNhap()" class="btn-banner btn-login-dvc">Đăng nhập</a>
 				<a href="https://dangky.dichvucong.gov.vn/register" class="btn-banner btn-register-dvc">Đăng ký</a>
 			</div>
 		</header>
@@ -189,6 +189,38 @@
 					<@liferay_util["include"] page=content_include />
 				</@>
 			</#if>
+			<!--  -->
+			<div class="mPopup" id="login-type">
+				<div class="popup-header">
+					<span>ĐĂNG NHẬP HỆ THỐNG</span>
+					<span id="closeLogin" style="
+						position: absolute;right: 0px;top: 0px;cursor: pointer;
+						width: 50px;height: 36px;padding-top: 5px;font-size: 22px;"> 
+						<i class="fa fa-close" aria-hidden="true"></i> 
+					</span>
+					
+				</div>
+				<div class="popup-content"  style="display: flex"> 
+					<div class="col-content-1">
+						<div class="content-login" onclick="loginDvcqg()">
+							<img class="idp-image" src="/o/hau-giang-theme/images/quoc_huy.svg" height="70">
+							<div style="color: #2A6EBB; font-size: small;margin-top: 10px;font-weight: 450;">
+								<span>Đăng nhập qua</span><br>
+								<span>Cổng DVCQG</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-content-1">
+						<div class="content-login" onclick="loginSso()">
+							<img class="idp-image" src="/o/hau-giang-theme/images/logo_hg.png" height="70">
+							<div style="color: #2A6EBB; font-size: small;margin-top: 10px;font-weight: 450;">
+								Đăng nhập qua Hệ thống xác thực tài khoản SSO
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  -->
 		</section>
 		<!--  -->
 		<div class="hotline-phone-ring-wrap">
@@ -245,8 +277,8 @@
 	<!-- <a href="/web/cong-dich-vu-cong-tinh-hau-giang" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a> -->
 		
 	<!-- inject:js -->
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=9831324231555"></script>
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=9831242331555"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=98531324231555"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=98331242331555"></script>
 	<!-- thongketruycap -->
 	<script>
 		var settingsGetTracking = {
@@ -296,7 +328,8 @@
 	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf.js?t=9991"></script>
 	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf-table-extractor.js?t=9991"></script>
 
-	<script type="text/javascript">		
+	<script type="text/javascript">
+		var urlRedirectLoginSso = ""		
 		$(document).ready(function() {
 			$("#navigation .nav-toggle").on('click', function(e) {
 				e.preventDefault();
@@ -329,7 +362,16 @@
 				);
 			});
 		});
-
+		$.ajaxSetup({
+		headers: {
+			'groupId': window.themeDisplay.getScopeGroupId(),
+			'Token': window.Liferay.authToken
+			}
+		});
+		$.get('/o/v1/opencps/is-enabled-sso-login',{})
+		.done(function(data) {
+			urlRedirectLoginSso = data 
+		})
 		var loginDvcqg = function () {
 			event.preventDefault();
 		    $.ajaxSetup({
@@ -347,8 +389,22 @@
 			})
 			// window.location.href = "/web/cong-dich-vu-cong-tinh-hau-giang/register#/login"
 		}
-		
-		
+		var loginSso = function () {
+			window.location.href = urlRedirectLoginSso
+		}
+		var luaChonDangNhap = function () {
+			$("html").css("overflow", "hidden !important");
+			$("body").addClass("fog");
+			$("#login-type").show();
+			setTimeout(function (){
+				$("#closeLogin").on('click', function(event){
+					event.preventDefault();
+					$("html").css("overflow", "");
+					$("body").removeClass("fog");
+					$("#login-type").hide();
+				});
+			},200)
+		}
 		window.PDFJS.workerSrc = '${themeDisplay.getPathThemeRoot()}/js/pdf.worker.js?t=9991';
 	    $.ajaxSetup({
 			headers: {"Token": Liferay.authToken},
@@ -942,8 +998,35 @@
 		.alert.alert-info {
 			display: none;
 		}
+
 		@media screen and (max-width: 767px) {
-			.btn-banner {
+			.btn-login-motcua {
+				display: none !important;
+			}
+			.btn-banner-mobile {
+				display: inline-block !important;
+				padding: 5px 10px !important;
+			}
+			#app_serviceinfo > div.application--wrap > main > div > div > div.list-thu-tuc > div.service__info__table.mt-2 > div.v-card.v-sheet.theme--light.elevation-2 > div.px-2.py-2.text-bold.white--text {
+				background-color: #903938 !important;
+			}
+			.btn-login-dvc{
+				right: 85px !important;
+				top: 78px !important;
+				z-index: 1000 !important;
+				height: 36px !important;
+				padding: 5px 10px !important;
+			}
+			.btn-register-dvc {
+				right: 0px !important;
+				top: 78px !important;
+				z-index: 1000 !important;
+				height: 36px !important;
+				padding: 5px 10px !important;
+			}
+		}
+		@media screen and (min-width: 768px) {
+			.btn-banner-mobile {
 				display: none !important;
 			}
 		}
@@ -1133,6 +1216,80 @@
 			}
 			}
 		/*  */
+		.yhy-append-wrap {
+			display: none !important;
+		}
+		.col-content-1 {
+        background: #fff;
+        width: 50%;
+        padding: 15px
+    }
+    .content-login{
+		border: 1px solid #d8d8d8;
+		height: 150px;
+		box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+		text-align: center;
+		padding: 13px;
+		cursor: pointer;
+    }
+	.fog:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.4);
+		z-index: 1000;
+	}
+	.mPopup {
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		z-index: 1005;
+		background-color: white;
+		border-radius: 4px;
+		width: 100%;
+		max-width: 450px;
+		display: none;
+	}
+	.mPopup .popup-header {
+		font-weight: bold;
+		text-align: center;
+		padding: 10px 15px;
+		border-bottom: 1px solid #ccc;
+		background-color: #ce7a58;
+    color: #fff;
+	}
+	.mPopup .popup-content {
+		padding: 20px;
+	}
+	.mPopup .popup-footer {
+		padding: 10px 15px;
+		text-align: center;
+	}
+	.mPopup .popup-footer a {
+		display: inline-block;
+		border-radius: 4px;
+		border: 1px solid #ce7a58;
+		padding: 6px 12px;
+	}
+	.mPopup .popup-footer a:hover {
+		color: white;
+		background-color: #ce7a58;
+	}
+	.mPopup .popup-footer .popup-submit {
+		margin-left: 15px;
+	}
+	.popup-content input {
+		background-color: transparent;
+		border: 1px solid #ce7a58;
+		border-radius: 4px;
+		width: 100%;
+		height: 34px;
+		padding: 0 5px;
+	}
 	</style>
 	
 	<script type="text/javascript">

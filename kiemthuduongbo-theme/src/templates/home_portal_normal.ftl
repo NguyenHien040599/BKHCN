@@ -31,7 +31,9 @@
     })();
     </script>
 	<!-- End Gov Tracking Code -->
-
+	<!-- Chatbot -->
+	<script type="text/javascript">(function () {var meta = document.createElement("meta");meta.name = "viewport";meta.content = "width=device-width, initial-scale=1";document.getElementsByTagName("head")[0].appendChild(meta);var a = document.createElement("script");a.async = !0;a.type = "text/javascript";a.id="platform-script";a.setAttribute("data-bid","61eac907bf9aad6c8634e9d1");a.setAttribute("data-appName","web");a.src = "https://cyberbot.vn/js/apps/chatbox/chatbox.botplatform.js";var b = document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a, b) })();</script>
+	<!--  -->
 	<base href="/">
 
 	<@liferay_util["include"] page=top_head_include />
@@ -122,9 +124,13 @@
 				<span>Fax: (024) 3.822.1066</span>
 				<span>Email: bophanhotro@mt.gov.vn</span>
 			</div>
-			<a target="_blank" href="https://www.facebook.com/groups/1207489822675506/" class="icon-face">
+			<a href="" class="" style="width: 34px;
+			height: 34px;
+			text-align: left;
+			line-height: 34px;"></a>
+			<!-- <a target="_blank" href="https://www.facebook.com/groups/1207489822675506/" class="icon-face">
 				<i class="fa fa-facebook"></i>
-			</a>
+			</a> -->
 		</div>
 	</footer>
 </div>
@@ -181,6 +187,10 @@
 			.page-theme #banner .signed-out-actions a.btn-register:before {
 				border-bottom: 29px solid #f26522;
 			}
+		}
+
+		iframe#botplatform_iframe {
+			width: 300px !important;
 		}
 	</style>
 	<script>

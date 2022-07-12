@@ -464,7 +464,30 @@
 		}
 		
 		@media screen and (max-width: 767px) {
-			.btn-banner {
+			.btn-login-motcua {
+				display: none !important;
+			}
+			.btn-banner-mobile {
+				display: inline-block !important;
+				padding: 5px 10px !important;
+			}
+			.btn-login-dvc{
+				right: 85px !important;
+				top: 78px !important;
+				z-index: 1000 !important;
+				height: 36px !important;
+				padding: 5px 10px !important;
+			}
+			.btn-register-dvc {
+				right: 0px !important;
+				top: 78px !important;
+				z-index: 1000 !important;
+				height: 36px !important;
+				padding: 5px 10px !important;
+			}
+		}
+		@media screen and (min-width: 768px) {
+			.btn-banner-mobile {
 				display: none !important;
 			}
 		}

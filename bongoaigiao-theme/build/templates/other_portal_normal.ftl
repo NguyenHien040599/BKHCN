@@ -39,6 +39,7 @@
 	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=02032022"></script>
 	<!--<script src="https://sp.zalo.me/plugins/sdk.js"></script>-->
 	
 	<script>
@@ -117,8 +118,8 @@
 	<a href="https://dichvucong.mofa.gov.vn" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a>
 		
 	<!-- inject:js -->
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
 	<#if permissionChecker.isOmniadmin()>
 		<@liferay_util["include"] page=body_bottom_include />
 		<@liferay_util["include"] page=bottom_include />

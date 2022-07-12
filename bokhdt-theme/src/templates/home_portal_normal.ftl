@@ -44,8 +44,31 @@
         window.__define = undefined;
         window.__require = undefined;
     </script>
-	
+	<!-- Begin EMC Tracking Code -->
+    <script type="text/javascript">
+        var _govaq = window._govaq || [];
+		_govaq.push(['trackPageView']);
+		_govaq.push(['enableLinkTracking']);
+		(function () {
+			_govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
+			_govaq.push(['setSiteId', '166']);
+			var d = document,
+				g = d.createElement('script'),
+				s = d.getElementsByTagName('script')[0];
+			g.type = 'text/javascript';
+			g.async = true;
+			g.defer = true;
+			g.src = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
+			s.parentNode.insertBefore(g, s);
+		})();
+		</script>
+	<!-- End EMC Tracking Code -->
 	<style>
+		.yhy-append-wrap {
+			display: inline-block !important;
+			position: fixed !important;
+			bottom: 0 !important;
+		}
 		body .status__counter {
 			top: 7px;
 		}
@@ -489,24 +512,6 @@
 				$(this).next().slideToggle();
 			});
 			
-			//Back to top
-			<!-- var offset = 300, -->
-				<!-- scroll_top_duration = 600; -->
-				<!-- $back_to_top = $('.btt'); -->
-				<!-- $back_to_home = $('.bth'); -->
-				
-			<!-- $(window).scroll(function(){ -->
-				<!-- ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('btt-is-visible') : $back_to_top.removeClass('btt-is-visible'); -->
-				<!-- ( $(this).scrollTop() > offset ) ? $back_to_home.addClass('btt-is-visible') : $back_to_home.removeClass('btt-is-visible'); -->
-			<!-- }); -->
-			//Smooth scroll to top
-			<!-- $back_to_top.on('click', function(event){ -->
-				<!-- event.preventDefault(); -->
-				<!-- $('body,html').animate({ -->
-					<!-- scrollTop: 0 , -->
-					<!-- }, scroll_top_duration -->
-				<!-- ); -->
-			<!-- }); -->
 		});
 	</script>
 	

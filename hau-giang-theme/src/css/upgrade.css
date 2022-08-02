@@ -556,7 +556,7 @@ body .v-dialog .v-toolbar .v-toolbar__content {
 }
 
 .e-file-select-wrap {
-    display: none !important;
+    /* display: none !important; */
 }
 #upload-front-image, #upload-back-image, #upload-selfie-image {
     position: absolute;

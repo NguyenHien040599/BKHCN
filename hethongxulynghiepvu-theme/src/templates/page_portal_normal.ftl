@@ -118,7 +118,8 @@
 		var doActionGroupNew = true;
 		var traCuuLgspCongDan = true;
 		var systemLgspConfig = "BO-GTVT";
-		var checkThuTucTraCuuCsdlConfig = true
+		var checkThuTucTraCuuCsdlConfig = true;
+		var showKySoMotCua = true
 	</script>
 	<!-- end -->
 </head>

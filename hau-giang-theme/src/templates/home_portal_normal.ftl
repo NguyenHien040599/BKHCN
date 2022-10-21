@@ -182,6 +182,11 @@
 	</script>
 	
 	<style>
+		.yhy-append-wrap {
+			position: fixed !important;
+			left: -35px;
+			bottom: 0;
+		}
 		body #react-root .v-navigation-drawer--is-mobile:not(.v-navigation-drawer--close), 
 		body #react-root .v-navigation-drawer--temporary:not(.v-navigation-drawer--close) {
 			-webkit-box-shadow: 0 1px 3px -1px rgba(0,0,0,.2), 1px 1px 5px -5px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);

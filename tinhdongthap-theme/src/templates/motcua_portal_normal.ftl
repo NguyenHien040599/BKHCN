@@ -5,7 +5,7 @@
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
 
 <head>
-	<title>Hệ thống thông tin một cửa điện tử tỉnh Đồng Tháp</title>
+	<title>Hệ thống thông tin giải quyết thủ tục hành chính tỉnh Đồng Tháp</title>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	
@@ -76,8 +76,8 @@
 		(function() {
 		  var u="//thongke.opencps.vn/";
 		  _paq.push(['setTrackerUrl', u+'matomo.php']);
-		  _paq.push(['setSiteId', '6']);
-		//   _paq.push(['setSiteId', '5']);
+		//   _paq.push(['setSiteId', '6']);
+		  _paq.push(['setSiteId', '5']);
 		  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 		  g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
 		})();
@@ -145,7 +145,10 @@
 		var activePdfEditor = true; /*sử dụng chức năng ghi chú trên tài liệu Pdf*/
 		var viTriLuuTru = false; /*sử dụng chức năng vị trí lưu trữ hồ sơ*/
 		var traCuuLgspCongDan = true;
-		var systemLgspConfig = "DongThap"
+		var traCuuLgspDoanhNghiep = true;
+		var requiredEform = true;
+		var systemLgspConfig = "DongThap";
+		var showKySoDocument = true
 	</script>
 	<!-- end -->
 </head>
@@ -173,7 +176,7 @@
 			<div class="cont">
 				<div class="mLogo align-middle"> 
 					<a href="${site_default_url}"> 
-						<img src="${themeDisplay.getPathThemeRoot()}/images/logo-header-motcua.png"> 
+						<img src="${themeDisplay.getPathThemeRoot()}/images/logo-dongthap.png" style="height: 90px;"> 
 					</a>
 				</div>
 				<div id="react-root" style="">
@@ -222,23 +225,6 @@
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=312412312399999"></script>
 	<script>
 		// thongketruycap
-		var settingsGetTracking = {
-			"url": "https://thongke.opencps.vn",
-			"method": "GET",
-			"headers": {
-			},
-			"data": {
-				"module": "API",
-				"method": "Live.getCounters",
-				"idSite": "6",
-				"lastMinutes": "1",
-				"format": "JSON",
-				"token_auth": "1811b03abf29e86ee2532678d70b31b0"
-			}
-		};
-
-		// 
-
 		// var settingsGetTracking = {
 		// 	"url": "https://thongke.opencps.vn",
 		// 	"method": "GET",
@@ -247,12 +233,29 @@
 		// 	"data": {
 		// 		"module": "API",
 		// 		"method": "Live.getCounters",
-		// 		"idSite": "5",
+		// 		"idSite": "6",
 		// 		"lastMinutes": "1",
 		// 		"format": "JSON",
 		// 		"token_auth": "1811b03abf29e86ee2532678d70b31b0"
 		// 	}
 		// };
+
+		// 
+
+		var settingsGetTracking = {
+			"url": "https://thongke.opencps.vn",
+			"method": "GET",
+			"headers": {
+			},
+			"data": {
+				"module": "API",
+				"method": "Live.getCounters",
+				"idSite": "5",
+				"lastMinutes": "1",
+				"format": "JSON",
+				"token_auth": "1811b03abf29e86ee2532678d70b31b0"
+			}
+		};
 		var getTracking = function () {
 			// $.ajax(settingsGetTracking ).done(function (response) {
 			// 	if (response && response[0] && response[0].hasOwnProperty('visitors')) {
@@ -269,8 +272,8 @@
 				} catch (error) {
 				}
 			});
-			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=6&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
-			// xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=5&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
+			// xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=6&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
+			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=5&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
 			xhr.send()
 		}
 		setTimeout(function () {

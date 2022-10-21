@@ -140,7 +140,8 @@
 		var requiredEform = true;
 		var checkAccSso = false;
 		var truCuuAi = true;
-		var showKySoMotCua = true
+		var showKySoMotCua = true;
+		var danhGiaCanBoTrenQuay = true
 	</script>
 	<!-- end -->
 </head>

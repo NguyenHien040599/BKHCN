@@ -49,7 +49,7 @@
         window.__require = undefined;
     </script>
 	
-	<script>${tracking_script}</script>
+	<!-- <script>${tracking_script}</script> -->
 </head>
 
 <body class="${css_class} mBody page-theme">
@@ -135,14 +135,14 @@
 				$(this).next().slideToggle();
 			});
 			
-			$(window).scroll(function () {
-				var scroll = $(window).scrollTop();
-				if (scroll >= 76) {
-					$("#navigation").addClass("nav-fixed-top");
-				} else {
-					$("#navigation").removeClass("nav-fixed-top");
-				}
-			});
+			// $(window).scroll(function () {
+			// 	var scroll = $(window).scrollTop();
+			// 	if (scroll >= 76) {
+			// 		$("#navigation").addClass("nav-fixed-top");
+			// 	} else {
+			// 		$("#navigation").removeClass("nav-fixed-top");
+			// 	}
+			// });
 		
 			$(".header_login .logo > img").attr("src","o/bongoaigiao-theme/images/logo-login-dvc.png");
 			
@@ -174,7 +174,7 @@
 		      'Token': window.Liferay.authToken
 		    }
 		  });
-		  $.get('/o/rest/v2/dvcqgsso/authurl',{state: "",redirectURL: "https://dichvucong.haugiang.gov.vn/web/cong-dich-vu-cong-tinh-hau-giang"})
+		  $.get('/o/rest/v2/dvcqgsso/authurl',{state: "",redirectURL: "https://dichvucong.mofa.gov.vn/web/cong-dich-vu-cong-bo-ngoai-giao"})
 		  .done(function(data) {    
 		        window.location.href = data
 		  })
@@ -192,6 +192,11 @@
 	</script>
 	
 	<style>
+		.yhy-append-wrap {
+			position: fixed !important;
+			left: -35px;
+			bottom: 0;
+		}
 		.deactive__btn.primary {
 			background-color: #fb8c00 !important;
 		}

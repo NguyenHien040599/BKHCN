@@ -138,7 +138,7 @@
 		<header id="banner" class="row">
 			<div class="mLogo align-middle"> 
 				<a href="${site_default_url}"> 
-					<img src="${themeDisplay.getPathThemeRoot()}/images/logo.png"> 
+					<img src="${themeDisplay.getPathThemeRoot()}/images/logo-new.png"> 
 					<div class="text-logo"> 
 						Hệ thống thông tin giải quyết thủ tục hành chính
 						<br/>
@@ -213,8 +213,9 @@
 				$back_to_top = $('.btt');
 				$back_to_home = $('.bth');
 				
-			$(".header_login .logo img").attr("src","o/boxaydung-theme/images/logo-login.png");
-				
+			$(".header_login .logo img").attr("src","o/boxaydung-theme/images/logo-new.png");
+			$("#login_container .text-logo").html('<p class="text-logo-1"> Hệ thống thông tin giải quyết thủ tục hành chính </p><p class="text-logo-2"> Bộ xây dựng </p>');
+
 			$(window).scroll(function(){
 				( $(this).scrollTop() > offset ) ? $back_to_top.addClass('btt-is-visible') : $back_to_top.removeClass('btt-is-visible');
 				( $(this).scrollTop() > offset ) ? $back_to_home.addClass('btt-is-visible') : $back_to_home.removeClass('btt-is-visible');
@@ -679,6 +680,31 @@
 		}
 		#footer {
 			padding-bottom: 30px !important;
+		}
+		#banner .text-logo, #banner .mLogo span {
+			text-transform: uppercase;
+			font-size: 20px !important;
+			font-weight: 900 !important;
+			color: red !important;
+			-webkit-text-stroke-width: 0.8px;
+			-webkit-text-stroke-color: #fff;
+			line-height: 30px;
+			font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important
+		}
+		.body_login .header_login img {
+			width: 150px;
+			margin: 0 auto !important;
+		}
+		.body_login .header_login .text-logo{
+			text-transform: uppercase;
+			font-size: 24px !important;
+			font-weight: 900 !important;
+			color: red !important;
+			-webkit-text-stroke-width: 0.8px;
+			-webkit-text-stroke-color: #fff;
+			line-height: 30px;
+			margin-top: 15px;
+			font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
 		}
 	</style>
 	

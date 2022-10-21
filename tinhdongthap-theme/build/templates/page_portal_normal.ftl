@@ -5,8 +5,8 @@
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
 
 <head>
-	<title>Cổng Dịch vụ công Tỉnh Đồng Tháp</title>
-
+	<!-- <title>Cổng Dịch vụ công Tỉnh Đồng Tháp</title> -->
+	<title>Hệ thống thông tin giải quyết thủ tục hành chính tỉnh Đồng Tháp</title>
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
@@ -23,9 +23,9 @@
 	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=82183183138123" rel="stylesheet" type="text/css">
 	<link href="${themeDisplay.getPathThemeRoot()}/css/bootstrap-glyphicons.css" rel="stylesheet" type="text/css">
 	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123323121" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=173892987" rel="stylesheet">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=1738392987" rel="stylesheet">
 	<!--  -->
-	<link href="${themeDisplay.getPathThemeRoot()}/css/toolbar.css?t=789312393817" rel="stylesheet" type="text/css">
+	<!-- <link href="${themeDisplay.getPathThemeRoot()}/css/toolbar.css?t=789312393817" rel="stylesheet" type="text/css"> -->
 	<link href="${themeDisplay.getPathThemeRoot()}/css/pdf_viewer.css?t=789313321987" rel="stylesheet" type="text/css">
 	<!--  -->
 	<script>
@@ -76,8 +76,8 @@
 		(function() {
 		  var u="//thongke.opencps.vn/";
 		  _paq.push(['setTrackerUrl', u+'matomo.php']);
-		//   _paq.push(['setSiteId', '5']);
-			_paq.push(['setSiteId', '6']);	
+		  _paq.push(['setSiteId', '5']);
+			// _paq.push(['setSiteId', '6']);	
 		  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 		  g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
 		})();
@@ -145,7 +145,10 @@
 		var activePdfEditor = true; /*sử dụng chức năng ghi chú trên tài liệu Pdf*/
 		var viTriLuuTru = false; /*sử dụng chức năng vị trí lưu trữ hồ sơ*/
 		var traCuuLgspCongDan = true;
-		var systemLgspConfig = "DongThap"
+		var traCuuLgspDoanhNghiep = true;
+		var requiredEform = true;
+		var systemLgspConfig = "DongThap";
+		var showKySoDocument = true
 	</script>
 	<!-- end -->
 </head>
@@ -173,7 +176,8 @@
 			<div class="cont">
 				<div class="mLogo align-middle"> 
 					<a href="${site_default_url}"> 
-						<img src="${themeDisplay.getPathThemeRoot()}/images/logo-header.png"> 
+						<img src="${themeDisplay.getPathThemeRoot()}/images/logo-dongthap.png" style="height: 90px;"> 
+						<!-- <img src="${themeDisplay.getPathThemeRoot()}/images/logo-header-motcua.png">  -->
 					</a>
 				</div>
 				<div id="react-root" style="">
@@ -255,23 +259,23 @@
 			"method": "GET",
 			"headers": {
 			},
-			// "data": {
-			// 	"module": "API",
-			// 	"method": "Live.getCounters",
-			// 	"idSite": "5",
-			// 	"lastMinutes": "1",
-			// 	"format": "JSON",
-			// 	"token_auth": "1811b03abf29e86ee2532678d70b31b0"
-			// }
-			
 			"data": {
 				"module": "API",
 				"method": "Live.getCounters",
-				"idSite": "6",
+				"idSite": "5",
 				"lastMinutes": "1",
 				"format": "JSON",
 				"token_auth": "1811b03abf29e86ee2532678d70b31b0"
 			}
+			
+			// "data": {
+			// 	"module": "API",
+			// 	"method": "Live.getCounters",
+			// 	"idSite": "6",
+			// 	"lastMinutes": "1",
+			// 	"format": "JSON",
+			// 	"token_auth": "1811b03abf29e86ee2532678d70b31b0"
+			// }
 		};
 		var getTracking = function () {
 			// $.ajax(settingsGetTracking ).done(function (response) {
@@ -290,8 +294,8 @@
 				}
 			});
 			// thongketruycap
-			// xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=5&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
-			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=6&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
+			xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=5&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
+			// xhr.open("GET", "https://thongke.opencps.vn/?module=API&method=Live.getCounters&idSite=6&lastMinutes=3&format=JSON&token_auth=1811b03abf29e86ee2532678d70b31b0")
 			xhr.send()
 		}
 		setTimeout(function () {
@@ -748,6 +752,27 @@
 		.background-triangle-small:before {
 			border-top: 19px solid #204b03;
 		}
+		/*  */
+		.background-triangle-big, .background-triangle-small, .page-theme .v-card__title, .page-theme .blue.darken-3, .page-theme #app_serviceinfo .v-tabs__item--active, .background-triangle-big1 {
+			background-color: #204b03 !important;
+		}
+		.background-triangle-big1 + div button {
+			background-color: #204b03 !important;
+			border-color: #204b03 !important;
+		}
+		.background-triangle-big:before {
+			border-top: 26px solid #204b03 !important;
+		}
+		.background-triangle-big1:before, .background-triangle-small:before {
+			border-top: 28px solid #204b03;
+		}
+		.background-triangle-small:before {
+			border-top: 19px solid #204b03 !important;
+		}
+		.page-theme .v-icon:not(.v-alert__icon), .background-triangle-big1 + div .groupcode-active {
+			color: #204b03 !important;
+		}
+		/*  */
 		.page-theme .v-icon:not(.v-alert__icon) {
 			color: #658a04 !important;
 		}
@@ -1138,7 +1163,9 @@
 			}
 		/*  */
 		.yhy-append-wrap {
-			display: none !important;
+			position: fixed !important;
+			left: 0;
+			bottom: 0;
 		}
 	</style>
 	

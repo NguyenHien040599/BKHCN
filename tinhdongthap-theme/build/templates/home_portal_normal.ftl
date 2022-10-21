@@ -5,7 +5,7 @@
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
 
 <head>
-	<title>Cổng Dịch vụ công Tỉnh Đồng Tháp</title>
+	<title>Hệ thống thông tin giải quyết thủ tục hành chính tỉnh Đồng Tháp</title>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -258,7 +258,11 @@
 				color: white;
 			}
 		}
-		
+		.yhy-append-wrap {
+			position: fixed !important;
+			left: 0;
+			bottom: 0;
+		}
 		#footer {
 			text-align: center;
 			background: url("/o/tinhdongthap-theme/images/bg-footer.jpg") left top repeat-y;
@@ -487,9 +491,6 @@
 			}
 			}
 		/*  */
-		.yhy-append-wrap {
-			display: none !important;
-		}
 	</style>
 	
 	<script>

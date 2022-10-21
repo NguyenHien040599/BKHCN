@@ -87,7 +87,8 @@
 			</#if>
 			<div class="btns">
 				<a href="/web/cong-dich-vu-cong/dang-nhap-dvcqg" class="login">Đăng nhập qua Cổng DVC Quốc gia</a>
-				<a href="/web/cong-dich-vu-cong/register#/login" class="login">Đăng nhập</a>
+				<!-- <a href="/web/cong-dich-vu-cong/register#/login" class="login">Đăng nhập</a> -->
+				<a href="javascript:;" onclick="luaChonDangNhap()" class="login">Đăng nhập</a>
 				<a href="/web/cong-dich-vu-cong/register" class="register">Đăng ký</a>
 			</div>
 			<div id="react-root" style="float: right;height: 71px;">
@@ -107,6 +108,39 @@
 					<@liferay_util["include"] page=content_include />
 				</@>
 			</#if>
+			<!--  -->
+			<div class="mPopup" id="login-type">
+				<div class="popup-header">
+					<span>ĐĂNG NHẬP HỆ THỐNG</span>
+					<span id="closeLogin" style="
+						position: absolute;right: 0px;top: 0px;cursor: pointer;
+						width: 50px;height: 36px;padding-top: 5px;font-size: 22px;"> 
+						<i class="fa fa-close" aria-hidden="true"></i> 
+					</span>
+					
+				</div>
+				<div class="popup-content"  style="display: flex"> 
+					<div class="col-content-1">
+						<div id="submitLoginKeyloack" class="content-login">
+							<img class="idp-image" src="/o/boxaydung-theme/images/government-login-1.png" height="70">
+							<div style="color: #2A6EBB;margin-top: 10px;font-weight: 450;">
+								<span>Đăng nhập</span><br>
+								<span>Tài khoản cán bộ</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-content-1">
+						<div id="submitLoginOpencps" class="content-login" >
+							<img class="idp-image" src="/o/boxaydung-theme/images/user-login-1.png" height="70">
+							<div style="color: #2A6EBB;margin-top: 10px;font-weight: 450;">
+								<span>Đăng nhập</span><br>
+								<span>Tài khoản công dân, doanh nghiệp</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  -->
 		</section>
 
 		<footer id="footer">
@@ -308,12 +342,116 @@
 			left: 0;
 			bottom: 0;
 		}
+		/*  */
+		.col-content-1 {
+			background: #fff;
+			width: 50%;
+			padding: 15px
+		}
+		.content-login{
+			border: 1px solid #d8d8d8;
+			height: 160px;
+			box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+			text-align: center;
+			padding: 13px;
+			cursor: pointer;
+		}
+		.fog:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0,0,0,0.4);
+			z-index: 1000;
+		}
+		.mPopup {
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			z-index: 1005;
+			background-color: white;
+			border-radius: 4px;
+			width: 100%;
+			max-width: 450px;
+			display: none;
+		}
+		.mPopup .popup-header {
+			font-weight: bold;
+			text-align: center;
+			padding: 10px 15px;
+			border-bottom: 1px solid #ccc;
+			background-color: #0072bc;
+		color: #fff;
+		}
+		.mPopup .popup-content {
+			padding: 20px;
+		}
+		.mPopup .popup-footer {
+			padding: 10px 15px;
+			text-align: center;
+		}
+		.mPopup .popup-footer a {
+			display: inline-block;
+			border-radius: 4px;
+			border: 1px solid #0072bc;
+			padding: 6px 12px;
+		}
+		.mPopup .popup-footer a:hover {
+			color: white;
+			background-color: #0072bc;
+		}
+		.mPopup .popup-footer .popup-submit {
+			margin-left: 15px;
+		}
+		.popup-content input {
+			background-color: transparent;
+			border: 1px solid #0072bc;
+			border-radius: 4px;
+			width: 100%;
+			height: 34px;
+			padding: 0 5px;
+		}
+		/*  */
 		#footer {
 			padding-bottom: 30px !important;
 		}
 	</style>
 	
-	
+	<script>
+		// SSO LOGIN
+		$("#submitLoginOpencps").bind( "click", function() {
+			window.location.href = "/web/cong-dich-vu-cong/register#/login"
+		});
+		var luaChonDangNhap = function () {
+			$("html").css("overflow", "hidden !important");
+			$("body").addClass("fog");
+			$("#login-type").show();
+			setTimeout(function (){
+				$("#closeLogin").on('click', function(event){
+					event.preventDefault();
+					$("html").css("overflow", "");
+					$("body").removeClass("fog");
+					$("#login-type").hide();
+				});
+			},200)
+		}
+		var urlRedirectSso = '';
+		var settingsSso = {
+			"url": "/o/v1/opencps/is-enabled-sso-login",
+			"method": "GET"
+		};
+
+		$.ajax(settingsSso).done(function (response) {
+			urlRedirectSso = response
+			$("#submitLoginKeyloack").bind( "click", function() {
+				window.location.href = urlRedirectSso
+			});
+		});
+		// 
+	</script>
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
 

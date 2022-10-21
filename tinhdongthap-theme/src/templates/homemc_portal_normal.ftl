@@ -5,7 +5,7 @@
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
 
 <head>
-	<title>Cổng Dịch vụ công Tỉnh Đồng Tháp</title>
+	<title>Hệ thống thông tin giải quyết thủ tục hành chính tỉnh Đồng Tháp/title>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">

@@ -1217,7 +1217,9 @@
 			}
 		/*  */
 		.yhy-append-wrap {
-			display: none !important;
+			position: fixed !important;
+			left: -35px;
+			bottom: 0;
 		}
 		.col-content-1 {
         background: #fff;

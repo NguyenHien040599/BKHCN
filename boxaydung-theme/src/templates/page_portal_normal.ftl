@@ -196,8 +196,8 @@
 	
 	
 	<!-- inject:js -->
-		<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
-		<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
+		<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=931241231"></script>
+		<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=931241231"></script>
 		<#if permissionChecker.isOmniadmin()>
 			<@liferay_util["include"] page=body_bottom_include />
 			<@liferay_util["include"] page=bottom_include />
@@ -274,7 +274,6 @@
 			top: 0;
 			height: 100%;
 			width: 100%;
-			background-image: url(http://hanhchinhcong.phutho.gov.vn/o/parent-opencps-vue/images/bg-home.jpg);
 			background-size: cover;
 			-webkit-filter: blur(200px);
 			z-index: -1;
@@ -692,7 +691,7 @@
 			font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important
 		}
 		.body_login .header_login img {
-			width: 150px;
+			width: 120px;
 			margin: 0 auto !important;
 		}
 		.body_login .header_login .text-logo{

@@ -148,7 +148,8 @@
 		var traCuuLgspDoanhNghiep = true;
 		var requiredEform = true;
 		var systemLgspConfig = "DongThap";
-		var showKySoDocument = true
+		var showKySoDocument = true;
+		var showKySoMotCua = true
 	</script>
 	<!-- end -->
 </head>
@@ -249,8 +250,8 @@
 	<!--<a href="/web/cong-dich-vu-cong-tinh-dong-thap" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a>-->
 		
 	<!-- inject:js -->
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=31241231239999"></script>
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=31241231239999"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=3124123999"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=31241231239"></script>
 	
 	<script>
 		// thongketruycap

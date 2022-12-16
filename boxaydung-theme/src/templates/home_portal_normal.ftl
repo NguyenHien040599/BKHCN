@@ -87,8 +87,8 @@
 			</#if>
 			<div class="btns">
 				<a href="/web/cong-dich-vu-cong/dang-nhap-dvcqg" class="login">Đăng nhập qua Cổng DVC Quốc gia</a>
-				<!-- <a href="/web/cong-dich-vu-cong/register#/login" class="login">Đăng nhập</a> -->
-				<a href="javascript:;" onclick="luaChonDangNhap()" class="login">Đăng nhập</a>
+				<a href="/web/cong-dich-vu-cong/register#/login" class="login">Đăng nhập</a>
+				<!-- <a href="javascript:;" onclick="luaChonDangNhap()" class="login">Đăng nhập</a> -->
 				<a href="/web/cong-dich-vu-cong/register" class="register">Đăng ký</a>
 			</div>
 			<div id="react-root" style="float: right;height: 71px;">
@@ -452,8 +452,8 @@
 		});
 		// 
 	</script>
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=931241231"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=931241231"></script>
 
 	<@liferay_util["include"] page=body_bottom_include />
 	<@liferay_util["include"] page=bottom_include />

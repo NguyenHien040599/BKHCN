@@ -4,7 +4,7 @@
 
 <#if theme_color_id == "dvc">
 	<#assign site_title = 'Cổng DVC trực tuyến Tỉnh Hậu Giang'/>
-	<#assign logo_img = 'logo-dvc.png'/>
+	<#assign logo_img = 'logo-dvc-3.png'/>
 <#elseif theme_color_id == "motcua">
 	<#assign site_title = 'Hệ thống thông tin MCĐT Tỉnh Hậu Giang'/>
 	<#assign logo_img = 'logo-motcua.png'/>

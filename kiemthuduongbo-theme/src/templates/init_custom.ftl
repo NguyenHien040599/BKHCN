@@ -28,6 +28,8 @@
 	<#assign system = 'Quản lý Xây dựng và Chất lượng công trình'/>
 <#elseif theme_color_id == "bogt">
 	<#assign img_logo = 'bogt-theme/logo.png'/>
+	<#assign img_bg_banner = 'bogt-theme/anh-banner.png'/>
+	<#assign img_trang_chu = 'bogt-theme/anh-trangchu.png'/>
 	<#assign system = 'Bộ Giao Thông'/>
 <#elseif theme_color_id == "vpbo">
 	<#assign img_logo = 'vpbo-theme/logo.png'/>

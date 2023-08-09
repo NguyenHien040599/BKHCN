@@ -11,7 +11,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
-	
+	<meta name="description" content="Cổng Dịch vụ công Tỉnh Hậu Giang cung cấp toàn bộ thông tin về thủ tục hành chính, thực hiện và giải quyết thủ tục hành chính trực tuyến...">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,10 +20,13 @@
 	
 	<base href="/">
 	<!--<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888" rel="stylesheet" type="text/css">-->
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=666" rel="stylesheet" type="text/css">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="stylesheet">
-	
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=666" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/o/tinhdongthap-theme/images/bg-header.jpg" as="image">
+	<link rel="preload" href="/o/tinhdongthap-theme/images/bg-header-sm.jpg" as="image">
+	<link rel="preload" href="/o/tinhdongthap-theme/images/bg-nav.jpg" as="image">
+	<link rel="preload" href="/o/tinhdongthap-theme/images/bg-footer.jpg" as="image">
 	<script>
         window.__define = window.define;
         window.__require = window.require;
@@ -62,15 +65,15 @@
 	<div class="" id="wrapper">
 		<header id="banner">
 			<div class="container">
-				<a href="${site_default_url}" class="mLogo"> 
-					<img src="${themeDisplay.getPathThemeRoot()}/images/${logo_img}">
+				<a aria-label="Trang chủ" href="${site_default_url}" class="mLogo"> 
+					<img alt="Dịch vụ công Tỉnh Hậu Giang" style="height: 100px;width: 670px;" src="${themeDisplay.getPathThemeRoot()}/images/${logo_img}">
 				</a>
 				<div id="react-root" style="">
 					<div id="app_login"></div>
 				</div>
-				<a href="/c/portal/login" class="btn-banner btn-login-motcua">Đăng nhập</a>
-				<a href="#" onclick="loginDvcqg()" class="btn-banner btn-login-dvc">Đăng nhập</a>
-				<a href="https://dangky.dichvucong.gov.vn/register" class="btn-banner btn-register-dvc">Đăng ký</a>
+				<a aria-label="Đăng nhập" href="/c/portal/login" class="btn-banner btn-login-motcua">Đăng nhập</a>
+				<a aria-label="Đăng nhập" href="#" onclick="loginDvcqg()" class="btn-banner btn-login-dvc">Đăng nhập</a>
+				<a aria-label="Đăng ký" href="https://dangky.dichvucong.gov.vn/register" class="btn-banner btn-register-dvc">Đăng ký</a>
 			</div>
 		</header>
 

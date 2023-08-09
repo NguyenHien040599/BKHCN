@@ -101,7 +101,6 @@
 			top: 0;
 			height: 100%;
 			width: 100%;
-			background-image: url(http://hanhchinhcong.phutho.gov.vn/o/parent-opencps-vue/images/bg-home.jpg);
 			background-size: cover;
 			-webkit-filter: blur(200px);
 			z-index: -1;

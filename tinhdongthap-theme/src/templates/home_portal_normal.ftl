@@ -6,20 +6,20 @@
 
 <head>
 	<title>Hệ thống thông tin giải quyết thủ tục hành chính tỉnh Đồng Tháp</title>
-
+	<meta name="description" content="Cổng Dịch vụ công Tỉnh Đồng Tháp cung cấp toàn bộ thông tin về thủ tục hành chính, thực hiện và giải quyết thủ tục hành chính trực tuyến...">
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
-	
+	<link rel="preload" href="/o/tinhdongthap-theme/images/logo-dongthap.webp" as="image">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=vietnamese" rel="stylesheet"> -->
-	<link rel="stylesheet" href="${themeDisplay.getPathThemeRoot()}/css/font-awesome.min.css">
+	<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="${themeDisplay.getPathThemeRoot()}/css/font-awesome.min.css">
 
 	<@liferay_util["include"] page=top_head_include />
 	
 	<base href="/">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8283188" rel="stylesheet" type="text/css">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8888123" rel="stylesheet" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8283188" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8888123" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
 	
 	<script>
         window.__define = window.define;
@@ -28,10 +28,10 @@
         window.require = undefined;
     </script>
 	
-	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js?t=93123123"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js"></script>
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script> -->
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script> -->
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js?t=93123123" ></script>
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js"></script> -->
 	
 	<script>
         window.define = window.__define;
@@ -128,7 +128,7 @@
 		</div>
 		<!--  -->
 		<footer id="footer">
-			<img src="${themeDisplay.getPathThemeRoot()}/images/lotus.png"/>
+			<img alt="DVC Đồng Tháp" src="${themeDisplay.getPathThemeRoot()}/images/lotus.png"/>
 			<!--<div class="statistics">Đang online: <span class="online">3</span> / <span class="total">122</span></div>-->
 			<p class="owner">Đơn vị quản lý: <b>ỦY BAN NHÂN DÂN TỈNH ĐỒNG THÁP</b></p>
 			<p class="info">
@@ -139,6 +139,30 @@
 				<span>Email: motcuadichvucong@gmail.com</span>
 			</p>
 		</footer>
+		<!--  -->
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<div class="container">  
+			<div data-toggle="modal" data-target="#myModal" onclick="document.getElementsByClassName('embed-responsive-item')[0].src = 'https://dongthapgpt.fds.vn/?'+Date.now();" 
+			style="position: fixed; right: 1.2em;bottom: 110px; display: inline-block;  z-index: 1999;    background: #fff;    transform: scale(1);    font-size: 25px;    line-height: 40px!important;    width: 55px;    height: 55px;    text-align: center;    box-shadow: 1px 0 22px -9px rgba(0,0,0,.4);    transition: all .3s cubic-bezier(.61,-.12,.08,1.55);    cursor: pointer;    border-radius: 50px;    top: auto;    color: brown;"> <img src="https://homeid.asia/wp-content/themes/landio/homeid-chat-gpt.gif" style="border-radius: 50px;"></img></div>
+			 <div class="modal fade" id="myModal" role="dialog">
+			  <div class="modal-dialog" role="document" style="bottom:0;     position: fixed;    width: 98vw; margin: 10px; bottom: 0px; top: auto;">  
+			   <div class="modal-content">
+				<div class="modal-header">
+				 <button type="button" class="close" data-dismiss="modal">&times;</button>
+				 <button type="button" onclick="document.getElementsByClassName('embed-responsive-item')[0].src = 'https://dongthapgpt.fds.vn/?'+Date.now();" style="right: 80px; position: absolute; border-radius: 5px; top: 16px;">Chủ đề mới</button>
+				 <h4 class="modal-title">Hỏi đáp với DongthapGPT</h4>
+				</div>
+				<div class="modal-body" style="padding: 0px !important; height: 580px;">
+				 <div class="embed-responsive embed-responsive-4by3" style="height: 580px">
+				  <iframe scrolling="yes" class="embed-responsive-item" src="#" style="height: 580px"></iframe>
+				 </div>
+				</div>
+			   </div>
+			  </div>
+			 </div>
+			</div> -->
+		<!--  -->
 	</div>
 	<!-- inject thong-ke-truy-cap -->
 	<script>
@@ -262,6 +286,8 @@
 			position: fixed !important;
 			left: 0;
 			bottom: 0;
+			width: auto !important;
+    		display: inline-block;
 		}
 		#footer {
 			text-align: center;
@@ -310,7 +336,7 @@
 			position: fixed;
 			bottom: 0;
     		right: 200px;
-			z-index: 999999;
+			z-index: 500;
 			}
 
 			.hotline-phone-ring {

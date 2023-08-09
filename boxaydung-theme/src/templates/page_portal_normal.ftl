@@ -8,8 +8,14 @@
 	<title>Bộ Xây dựng</title>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-	
+	<meta name="description" content="Cổng Dịch vụ công Bộ Xây dựng cung cấp toàn bộ thông tin về thủ tục hành chính, thực hiện và giải quyết thủ tục hành chính trực tuyến...">
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
+	<link rel="preload" href="/o/boxaydung-theme/images/bg.png" as="image">
+	<link rel="preload" href="/o/boxaydung-theme/images/logo-new.png" as="image">
+	<link rel="preload" href="/o/opencps-store/js/cli/dvc/app/image/logo-viettel-ca.png" as="image">
+	<link rel="preload" href="/o/opencps-store/js/cli/dvc/app/image/logo-kyso-bancoyeu.png" as="image">
+	<link rel="preload" href="/o/opencps-store/js/cli/dvc/app/image/logo-vnpt-ca.svg" as="image">
+	<link rel="preload" href="/o/opencps-store/js/cli/login/app/image/img_login.png" as="image">
 	
 	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=vietnamese" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
@@ -18,10 +24,10 @@
 	<@liferay_util["include"] page=top_head_include />
 	
 	<base href="/">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=6663155314999999923523123" rel="stylesheet" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=6663155314999999923523123" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
 	<!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" type="text/css"> -->
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="stylesheet">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 	<script>
         window.__define = window.define;
@@ -31,19 +37,19 @@
     </script>
     
 	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=02032022"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js" defer></script>
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js" defer></script> -->
+	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js" defer></script>
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script> -->
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js" defer></script> -->
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=02032022" defer></script>
 	
 	<script>
         window.define = window.__define;
@@ -111,7 +117,12 @@
 		var activePdfEditor = false; /*sử dụng chức năng ghi chú trên tài liệu Pdf*/
 		var viTriLuuTru = false; /*sử dụng chức năng vị trí lưu trữ hồ sơ*/;
 		var yeuCauSoHoa = true;
-		var showKySoMotCua = true
+		var showKySoMotCua = true;
+		var levelNameMapping = {
+			2: 'Mức độ 2',
+			3: 'DVCTT một phần',
+			4: 'DVCTT toàn trình'
+		}
 	</script>
 	<!-- end -->
 </head>
@@ -137,9 +148,16 @@
 	<div class="container-fluid" id="wrapper" style="overflow: hidden;">
 		<header id="banner" class="row">
 			<div class="mLogo align-middle"> 
-				<a href="${site_default_url}"> 
-					<img src="${themeDisplay.getPathThemeRoot()}/images/logo-new.png"> 
-					<div class="text-logo"> 
+				<a href="${site_default_url}" aria-label="Trang chủ"> 
+					<img alt="Ảnh banner" src="${themeDisplay.getPathThemeRoot()}/images/logo-new.png" style="width: 70px;height: 70px;"> 
+					<div class="text-logo" style="text-transform: uppercase;
+						font-size: 22px !important;
+						font-family: 'Roboto';
+						font-weight: 900 !important;
+						color: red !important;
+						-webkit-text-stroke-width: 0.3px;
+						-webkit-text-stroke-color: #fff;
+						line-height: 30px;"> 
 						Hệ thống thông tin giải quyết thủ tục hành chính
 						<br/>
 						<span>Bộ Xây dựng</span>
@@ -191,8 +209,8 @@
 		</footer>		
 	</div>
 	
-	<a href="" class="btt"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-	<a href="/web/cong-dich-vu-cong" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a>
+	<a aria-label="Trang chủ" href="" class="btt"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+	<a aria-label="Trang chủ" href="/web/cong-dich-vu-cong" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a>
 	
 	
 	<!-- inject:js -->
@@ -203,8 +221,8 @@
 			<@liferay_util["include"] page=bottom_include />
 		</#if>
 	<!-- endinject -->
-	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf.js?t=9991"></script>
-	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf-table-extractor.js?t=9991"></script>
+	<!-- <script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf.js?t=9991"></script>
+	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf-table-extractor.js?t=9991"></script> -->
 
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -682,13 +700,13 @@
 		}
 		#banner .text-logo, #banner .mLogo span {
 			text-transform: uppercase;
-			font-size: 20px !important;
+			font-size: 22px !important;
+			font-family: 'Roboto';
 			font-weight: 900 !important;
 			color: red !important;
-			-webkit-text-stroke-width: 0.8px;
+			-webkit-text-stroke-width: 0.3px;
 			-webkit-text-stroke-color: #fff;
 			line-height: 30px;
-			font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important
 		}
 		.body_login .header_login img {
 			width: 120px;
@@ -696,14 +714,14 @@
 		}
 		.body_login .header_login .text-logo{
 			text-transform: uppercase;
-			font-size: 24px !important;
+			font-size: 27px !important;
 			font-weight: 900 !important;
 			color: red !important;
-			-webkit-text-stroke-width: 0.8px;
+			-webkit-text-stroke-width: 0.5px;
 			-webkit-text-stroke-color: #fff;
 			line-height: 30px;
 			margin-top: 15px;
-			font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+			font-family: 'Roboto';
 		}
 	</style>
 	

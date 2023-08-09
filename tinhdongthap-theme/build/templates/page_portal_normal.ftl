@@ -8,7 +8,7 @@
 	<!-- <title>Cổng Dịch vụ công Tỉnh Đồng Tháp</title> -->
 	<title>Hệ thống thông tin giải quyết thủ tục hành chính tỉnh Đồng Tháp</title>
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-	
+	<meta name="description" content="Cổng Dịch vụ công Tỉnh Đồng Tháp cung cấp toàn bộ thông tin về thủ tục hành chính, thực hiện và giải quyết thủ tục hành chính trực tuyến...">
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
 	
 	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=vietnamese" rel="stylesheet">
@@ -19,14 +19,14 @@
 	<@liferay_util["include"] page=top_head_include />
 	
 	<base href="/">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888125553123" rel="stylesheet" type="text/css">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=82183183138123" rel="stylesheet" type="text/css">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/bootstrap-glyphicons.css" rel="stylesheet" type="text/css">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123323121" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=1738392987" rel="stylesheet">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888125553123" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=821831831138123" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/bootstrap-glyphicons.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123323121" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=1738392987" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!--  -->
 	<!-- <link href="${themeDisplay.getPathThemeRoot()}/css/toolbar.css?t=789312393817" rel="stylesheet" type="text/css"> -->
-	<link href="${themeDisplay.getPathThemeRoot()}/css/pdf_viewer.css?t=789313321987" rel="stylesheet" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/pdf_viewer.css?t=789313321987" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
 	<!--  -->
 	<script>
         window.__define = window.define;
@@ -36,30 +36,30 @@
     </script>
 	
 	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js?t=93123123"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
-	<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js"  defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js" defer></script>
+	<script src="https://sp.zalo.me/plugins/sdk.js" defer></script>
 	<!-- pdf editor -->
-	<script src="${themeDisplay.getPathThemeRoot()}/js/pdf-ann.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/pdf_viewer.js?t=98312412"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/pdf-ann.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/pdf_viewer.js?t=98312412" defer></script>
 	<!--  -->
-	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js?t=8888"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=9381412312"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/function-vtca.min.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js?t=81888"></script>
+	
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=9381412312" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/function-vtca.min.js" defer></script>
 
-	<script src="${themeDisplay.getPathThemeRoot()}/js/trumbowyg.min.js?t=123"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/trumbowyg.min.js?t=123" defer></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/vue-trumbowyg.js?t=123"></script>
-    <script src="${themeDisplay.getPathThemeRoot()}/js/jquery.jexcel.js"></script>
-
+    <script src="${themeDisplay.getPathThemeRoot()}/js/jquery.jexcel.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js?t=3124123"></script>
 	<script>
         window.define = window.__define;
         window.require = window.__require;
@@ -134,7 +134,7 @@
 		var notifyConfig = true; /*lựa chọn hình thức gửi thông báo*/
 		var defaultCityCode = 87; /*set cityCode mặc định ex: 87 (Đồng Tháp)*/
 		var defaultCityName = "Tỉnh Đồng Tháp"; /*set cityName mặc định ex: 'Tỉnh Đồng Tháp' (Đồng Tháp)*/
-		var khoTaiLieuCongDan = false; /*sử dụng kho tài liệu công dân*/
+		var khoTaiLieuCongDan = true; /*sử dụng kho tài liệu công dân*/
 		var showKySoDvc = true; /*sử dụng ký số phía cổng DVC*/
 		var hasPreviewSync = false; /*in tiến trình xử lý hs*/
 		var thanhToanChuyenKhoan = true; /*sử dụng thanh toán chuyển khoản*/
@@ -149,7 +149,9 @@
 		var requiredEform = true;
 		var systemLgspConfig = "DongThap";
 		var showKySoDocument = true;
-		var showKySoMotCua = true
+		var showKySoMotCua = true;
+		var SCAN_QR_CCCD = true;
+		var kySoCongCongMotCua = true
 	</script>
 	<!-- end -->
 </head>
@@ -176,8 +178,8 @@
 		<header id="banner">
 			<div class="cont">
 				<div class="mLogo align-middle"> 
-					<a href="${site_default_url}"> 
-						<img src="${themeDisplay.getPathThemeRoot()}/images/logo-dongthap.png" style="height: 90px;"> 
+					<a href="${site_default_url}" aria-label="Trang chủ"> 
+						<img alt="Dịch vụ công Tỉnh Đồng Tháp" src="${themeDisplay.getPathThemeRoot()}/images/logo-dongthap.png" style="height: 90px; width: 445px;"> 
 						<!-- <img src="${themeDisplay.getPathThemeRoot()}/images/logo-header-motcua.png">  -->
 					</a>
 				</div>
@@ -210,12 +212,12 @@
 				<div class="hotline-phone-ring-circle"></div>
 				<div class="hotline-phone-ring-circle-fill"></div>
 				<div class="hotline-phone-ring-img-circle">
-					<a href="tel:1900866699" class="pps-btn-img">
-						<img src="/o/tinhdongthap-theme/images/ring-phone.png"
+					<a href="tel:1900866699" class="pps-btn-img" aria-label="DVC">
+						<img src="/o/tinhdongthap-theme/images/ring-phone.png" alt="Dịch vụ công Tỉnh Đồng Tháp"
 							alt="Số điện thoại" width="50">
 					</a>
 				</div>
-				<a href="tel:1900866699" style="
+				<a href="tel:1900866699" aria-label="DVC" style="
 					width: 255px;
 					height: 31px;
 					line-height: 31px;
@@ -246,7 +248,7 @@
 		
 	</div>
 	
-	<a href="" class="btt"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+	<a href="" class="btt"><i class="fa fa-chevron-up" aria-hidden="true" aria-label="DVC"></i></a>
 	<!--<a href="/web/cong-dich-vu-cong-tinh-dong-thap" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a>-->
 		
 	<!-- inject:js -->
@@ -1167,6 +1169,8 @@
 			position: fixed !important;
 			left: 0;
 			bottom: 0;
+			width: auto !important;
+    		display: inline-block;
 		}
 	</style>
 	

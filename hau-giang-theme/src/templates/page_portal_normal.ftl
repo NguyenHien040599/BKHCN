@@ -8,7 +8,7 @@
 	<title>${site_title}</title>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-	
+	<meta name="description" content="Cổng Dịch vụ công Tỉnh Hậu Giang cung cấp toàn bộ thông tin về thủ tục hành chính, thực hiện và giải quyết thủ tục hành chính trực tuyến...">
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
 	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=vietnamese" rel="stylesheet">
@@ -19,10 +19,11 @@
 	
 	<base href="/">
 	<!--<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888" rel="stylesheet" type="text/css">-->
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=666" rel="stylesheet" type="text/css">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=1789331312387" rel="stylesheet">
-
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=663551336" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=12355321" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=1789323387" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="/o/hau-giang-theme/images/bg-header-1920.png" as="image">
+	<link rel="preload" href="/o/hau-giang-theme/images/bg-header-1366.png" as="image">
 	<script>
         window.__define = window.define;
         window.__require = window.require;
@@ -31,20 +32,20 @@
     </script>
 	
 	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/select2-full.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=9312231"></script>
-	<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/select2-full.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=9312231" defer></script>
+	<!-- <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
 	
 	<script>
         window.define = window.__define;
@@ -121,7 +122,7 @@
 		var notifyConfig = true; /*lựa chọn hình thức gửi thông báo*/
 		var defaultCityCode = 93; /*set cityCode mặc định ex: 87 (Đồng Tháp)*/
 		var defaultCityName = ""; /*set cityName mặc định ex: 'Tỉnh Đồng Tháp' (Đồng Tháp)*/
-		var khoTaiLieuCongDan = false; /*sử dụng kho tài liệu công dân*/
+		var khoTaiLieuCongDan = true; /*sử dụng kho tài liệu công dân*/
 		var showKySoDvc = true; /*sử dụng ký số phía cổng DVC*/
 		var hasPreviewSync = true; /*in tiến trình xử lý hs*/
 		var thanhToanChuyenKhoan = false; /*sử dụng thanh toán chuyển khoản*/
@@ -135,7 +136,10 @@
 		var traCuuLgspDoanhNghiep = true;
 		var requiredEform = true;
 		var checkAccSso = true;
-		var truCuuAi = true
+		var truCuuAi = true;
+		var maxFileSizeConfig=20;
+		var setXemLichSuCapNhatGiayTo = true;
+		var urlFileHdsdKhoDienTu = "/documents/35417/0/HDSD_Kho_du+lieu_cong_dan_TTHC.pdf"
 	</script>
 	<!-- end -->
 </head>
@@ -161,15 +165,15 @@
 	<div class="" id="wrapper" style="overflow: hidden;">
 		<header id="banner">
 			<div class="container">
-				<a href="${site_default_url}" class="mLogo"> 
-					<img src="${themeDisplay.getPathThemeRoot()}/images/${logo_img}">
+				<a aria-label="Trang chủ" href="${site_default_url}" class="mLogo"> 
+					<img alt="Dịch vụ công Tỉnh Hậu Giang" style="height: 100px;width: 670px;" src="${themeDisplay.getPathThemeRoot()}/images/${logo_img}">
 				</a>
 				<div id="react-root" style="">
 					<div id="app_login"></div>
 				</div>
-				<a href="/c/portal/login" class="btn-banner btn-login-motcua">Đăng nhập</a>
-				<a href="javascript:;" onclick="luaChonDangNhap()" class="btn-banner btn-login-dvc">Đăng nhập</a>
-				<a href="https://dangky.dichvucong.gov.vn/register" class="btn-banner btn-register-dvc">Đăng ký</a>
+				<a aria-label="Đăng nhập" href="/c/portal/login" class="btn-banner btn-login-motcua">Đăng nhập</a>
+				<a aria-label="Đăng nhập" href="javascript:;" onclick="luaChonDangNhap()" class="btn-banner btn-login-dvc">Đăng nhập</a>
+				<a aria-label="Đăng ký" href="https://dangky.dichvucong.gov.vn/register" class="btn-banner btn-register-dvc">Đăng ký</a>
 			</div>
 		</header>
 		
@@ -203,7 +207,7 @@
 				<div class="popup-content"  style="display: flex"> 
 					<div class="col-content-1">
 						<div class="content-login" onclick="loginDvcqg()">
-							<img class="idp-image" src="/o/hau-giang-theme/images/quoc_huy.svg" height="70">
+							<img alt="Dịch vụ công Tỉnh Hậu Giang" loading="lazy" class="idp-image" src="/o/hau-giang-theme/images/quoc_huy.png" height="70">
 							<div style="color: #2A6EBB; font-size: small;margin-top: 10px;font-weight: 450;">
 								<span>Đăng nhập qua</span><br>
 								<span>Cổng DVCQG</span>
@@ -212,7 +216,7 @@
 					</div>
 					<div class="col-content-1">
 						<div class="content-login" onclick="loginSso()">
-							<img class="idp-image" src="/o/hau-giang-theme/images/logo_hg.png" height="70">
+							<img alt="Dịch vụ công Tỉnh Hậu Giang" loading="lazy" class="idp-image" src="/o/hau-giang-theme/images/logo_hg.png?t=31231" height="70">
 							<div style="color: #2A6EBB; font-size: small;margin-top: 10px;font-weight: 450;">
 								Đăng nhập qua Hệ thống xác thực tài khoản SSO
 							</div>
@@ -414,7 +418,7 @@
 	
 	<style>
 		#banner img {
-			max-height: 88px;
+			max-height: 100px;
 		}
 		#wrapper {
 			padding-top: 0 !important;
@@ -754,7 +758,6 @@
 			flex: 1 1 auto;
 		}
 		.body_login #login_container > div:nth-child(2) {
-			background: url("/o/bo-tttt-theme/images/bg-login-1.jpg") center center no-repeat;
 			background-size: cover;
 			border-radius: 8px 0 0 8px;
 			padding: 30px 45px;
@@ -841,7 +844,6 @@
 			margin-top: 10%;
 		}
 		.body_login .forgot-pass-wrapper main form {
-			background: url("/o/bo-tttt-theme/images/bg-forgot-pass.png") center center no-repeat;
 			background-size: cover;
 			padding: 30px !important;
 			border-radius: 20px !important;
@@ -1220,6 +1222,10 @@
 			position: fixed !important;
 			left: -35px;
 			bottom: 0;
+		}
+		.yhy-append-wrap img{ 
+			width: 16px;
+			height: 13px;
 		}
 		.col-content-1 {
         background: #fff;

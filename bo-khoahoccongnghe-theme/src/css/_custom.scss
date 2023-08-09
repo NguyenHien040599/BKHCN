@@ -1,0 +1,58 @@
+// Main Variable
+$main-color: #00aeef;
+$main-color-dark: #043f6f;
+$sub-color: #faf60a;
+
+//Mixin
+@mixin box-shadow($value) {
+  	-webkit-box-shadow: $value;
+    box-shadow: $value;
+}
+
+@mixin transform($value) {
+  	-webkit-transform: $value;
+    transform: $value;
+}
+
+@mixin transition($value) {
+  	-webkit-transition: $value;
+    transition: $value;
+}
+
+@mixin d_flex {
+  	display: -webkit-box;
+  	display: flex;
+}
+
+@mixin flex_wrap($value) {
+  	-webkit-flex-wrap: $value;
+  	flex-wrap: $value;
+}
+
+@mixin flex_align($value) {
+  	-webkit-align-items: $value;
+  	align-items: $value;
+}
+
+@mixin flex_justify($value) {
+  	-webkit-justify-content: $value;
+  	justify-content: $value;
+}
+
+@font-face {
+	font-family: 'Glyphicons Halflings';
+	src: url('../fonts/glyphicons-halflings-regular.eot');
+	src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), 
+		 url('../fonts/glyphicons-halflings-regular.woff') format('woff'), 
+		 url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+		 url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+
+@import url(base-style.css);
+@import url(app.css);
+@import url(chunk-vendors.css);
+@import url(alpaca-old-form.css);
+@import url(custom-style.css);

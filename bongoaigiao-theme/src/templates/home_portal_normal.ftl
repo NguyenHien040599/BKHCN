@@ -9,16 +9,20 @@
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	
+	<meta name="description" content="Cổng Dịch vụ công Bộ Ngoại giao cung cấp toàn bộ thông tin về thủ tục hành chính, thực hiện và giải quyết thủ tục hành chính trực tuyến...">
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
-
+	
+	<link rel="preload" href="/o/bongoaigiao-theme/images/logo-dvc.png" as="image">
+	<link rel="preload" href="/o/bongoaigiao-theme/images/bg-search.webp" as="image">
+	<link rel="preload" href="/o/bongoaigiao-theme/images/banner-congttdt.png" as="image">
+	<link rel="preload" href="/o/bongoaigiao-theme/images/bg-statics.png" as="image">
 	<@liferay_util["include"] page=top_head_include />
 	
 	<base href="/">
 	<!--<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888" rel="stylesheet" type="text/css">-->
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8888" rel="stylesheet" type="text/css">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="stylesheet">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8888" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	
 	<script>
         window.__define = window.define;
@@ -60,15 +64,15 @@
 	<div class="" id="wrapper">
 		<header id="banner">
 			<div class="container">
-				<a href="${site_default_url}" class="mLogo"> 
-					<img src="${themeDisplay.getPathThemeRoot()}/images/${logo_img}">
+				<a href="${site_default_url}" class="mLogo" aria-label="Trang chủ" > 
+					<img src="${themeDisplay.getPathThemeRoot()}/images/${logo_img}" alt="Dịch vụ công Bộ Ngoại giao">
 				</a>
-				<div id="react-root" style="">
+				<div id="react-root">
 					<div id="app_login"></div>
 				</div>
-				<a href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky#/login-dichvucong" class="btn-banner btn-login-motcua">Đăng nhập</a>
-				<a href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky#/login-dichvucong" class="btn-banner btn-login-dvc">Đăng nhập</a>
-				<a href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky" class="btn-banner btn-register-dvc">Đăng ký</a>
+				<a aria-label="Đăng nhập"  href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky#/login-dichvucong" class="btn-banner btn-login-motcua">Đăng nhập</a>
+				<a aria-label="Đăng nhập"  href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky#/login-dichvucong" class="btn-banner btn-login-dvc">Đăng nhập</a>
+				<a aria-label="Đăng ký"  href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky" class="btn-banner btn-register-dvc">Đăng ký</a>
 			</div>
 		</header>
 
@@ -102,8 +106,8 @@
 	</div>
 	
 	<!-- inject:js -->
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=3124123123"></script>
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=3124123123"></script>
+	<!-- <script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=3124123123"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=3124123123"></script> -->
 	<script>
 		$(document).ready(function() {
 			$("#navigation .nav-toggle").on('click', function(e) {

@@ -101,7 +101,7 @@
 		var showTinhPhi = false; /*show tính phí dịch vụ chuyển phát*/
 		var hasOrganization = false; /*loại người dùng tách "Tổ chức" riêng*/
 		var applicantConfig = true; /*bind applicant từ danh sách applicant*/
-		var notifyConfig = true; /*lựa chọn hình thức gửi thông báo*/
+		var notifyConfig = false; /*lựa chọn hình thức gửi thông báo*/
 		var defaultCityCode = "01"; /*set cityCode mặc định ex: 87 (Đồng Tháp)*/
 		var defaultCityName = ""; /*set cityName mặc định ex: 'Tỉnh Đồng Tháp' (Đồng Tháp)*/
 		var khoTaiLieuCongDan = false; /*sử dụng kho tài liệu công dân*/
@@ -111,7 +111,7 @@
 		var thaoTacUyQuyen = false; /*sử dụng chức năng ủy quyền xử lý hs*/
 		var hasDownloadAllFile = false; /*sử dụng chức năng download tất cả giấy tờ đính kèm*/
 		var checkTrungChuHoSo = false; /*bật check trùng chủ hồ sơ có hồ sơ đang giải quyết*/
-		var fromViaPostalConfig = true; /*check xác nhận là hồ sơ nhận qua bưu chính*/
+		var fromViaPostalConfig = false; /*check xác nhận là hồ sơ nhận qua bưu chính*/
 		var activePdfEditor = false; /*sử dụng chức năng ghi chú trên tài liệu Pdf*/
 		var viTriLuuTru = false; /*sử dụng chức năng vị trí lưu trữ hồ sơ*/
 		var traCuuLgspCongDan = false;

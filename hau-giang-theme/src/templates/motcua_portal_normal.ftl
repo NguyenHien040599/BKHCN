@@ -44,7 +44,7 @@
 	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=931412312"></script>
-	<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+	<!-- <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
 
 	<script src="${themeDisplay.getPathThemeRoot()}/js/trumbowyg.min.js?t=123"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/vue-trumbowyg.js?t=123"></script>
@@ -125,7 +125,7 @@
 		var notifyConfig = true; /*lựa chọn hình thức gửi thông báo*/
 		var defaultCityCode = 93; /*set cityCode mặc định ex: 87 (Đồng Tháp)*/
 		var defaultCityName = ""; /*set cityName mặc định ex: 'Tỉnh Đồng Tháp' (Đồng Tháp)*/
-		var khoTaiLieuCongDan = false; /*sử dụng kho tài liệu công dân*/
+		var khoTaiLieuCongDan = true; /*sử dụng kho tài liệu công dân*/
 		var showKySoDvc = true; /*sử dụng ký số phía cổng DVC*/
 		var hasPreviewSync = true; /*in tiến trình xử lý hs*/
 		var thanhToanChuyenKhoan = false; /*sử dụng thanh toán chuyển khoản*/
@@ -138,10 +138,13 @@
 		var traCuuLgspCongDan = true;
 		var traCuuLgspDoanhNghiep = true;
 		var requiredEform = true;
-		var checkAccSso = false;
+		var checkAccSso = true;
 		var truCuuAi = true;
 		var showKySoMotCua = true;
-		var danhGiaCanBoTrenQuay = true
+		var danhGiaCanBoTrenQuay = true;
+		var maxFileSizeConfig=20;
+		var setXemLichSuCapNhatGiayTo = true;
+		var urlFileHdsdKhoDienTu = "/documents/35417/0/HDSD_Kho_du+lieu_cong_dan_TTHC.pdf"
 	</script>
 	<!-- end -->
 </head>
@@ -168,7 +171,7 @@
 		<header id="banner">
 			<div class="container">
 				<a href="${site_default_url}" class="mLogo"> 
-					<img src="${themeDisplay.getPathThemeRoot()}/images/logo-motcua.png">
+					<img style="max-height: 88px;" src="${themeDisplay.getPathThemeRoot()}/images/logo-motcua.png">
 				</a>
 				<div id="react-root" style="">
 					<div id="app_login"></div>
@@ -658,7 +661,6 @@
 			flex: 1 1 auto;
 		}
 		.body_login #login_container > div:nth-child(2) {
-			background: url("/o/bo-tttt-theme/images/bg-login-1.jpg") center center no-repeat;
 			background-size: cover;
 			border-radius: 8px 0 0 8px;
 			padding: 30px 45px;
@@ -745,7 +747,6 @@
 			margin-top: 10%;
 		}
 		.body_login .forgot-pass-wrapper main form {
-			background: url("/o/bo-tttt-theme/images/bg-forgot-pass.png") center center no-repeat;
 			background-size: cover;
 			padding: 30px !important;
 			border-radius: 20px !important;
@@ -839,6 +840,9 @@
 			}
 		}
 		
+		.username-login {
+			color: #903938 !important;
+		}
 		
 		/* HDSD Motcua */
 		.motcua-theme .manual-wrapper .manual-head .side-col, 

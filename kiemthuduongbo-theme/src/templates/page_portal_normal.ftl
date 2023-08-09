@@ -9,28 +9,12 @@
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-
+	<!-- <meta http-equiv="Content-Security-Policy" content="img-src 'self' 'unsafe-inline' 'unsafe-eval'"> -->
+	<meta name="description" content="Cổng Dịch vụ công Bộ Giao thông vận tải cung cấp toàn bộ thông tin về thủ tục hành chính, thực hiện và giải quyết thủ tục hành chính trực tuyến...">
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/color_schemes/${theme_color_id}-theme/favicon.ico">
+	<link rel="preload" href="/o/kiemthuduongbo-theme/images/bg-header-page.webp" as="image">
+	<link rel="preload" href="/o/kiemthuduongbo-theme/images/color_schemes/bogt-theme/logo.png" as="image">
 	
-	<!-- Begin Gov Tracking Code -->
-    <script type="text/javascript">
-        var _govaq = window._govaq || [];
-    _govaq.push(['trackPageView']);
-    _govaq.push(['enableLinkTracking']);
-    (function () {
-        _govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
-        _govaq.push(['setSiteId', '47']);
-        var d = document,
-            g = d.createElement('script'),
-            s = d.getElementsByTagName('script')[0];
-        g.type = 'text/javascript';
-        g.async = true;
-        g.defer = true;
-        g.src = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
-        s.parentNode.insertBefore(g, s);
-    })();
-    </script>
-	<!-- End Gov Tracking Code -->
 	
 	<!-- Config Scope -->
 	<script type="text/javascript">
@@ -61,6 +45,7 @@
 		var defaultCityCode = false; /*set cityCode mặc định ex: 87 (Đồng Tháp)*/
 		var defaultCityName = false; /*set cityName mặc định ex: 'Tỉnh Đồng Tháp' (Đồng Tháp)*/
 		var khoTaiLieuCongDan = true; /*sử dụng kho tài liệu công dân*/
+		var khoTaiLieuTapTrung = true;
 		var showKySoDvc = false; /*sử dụng ký số phía cổng DVC*/
 		var hasPreviewSync = false; /*in tiến trình xử lý hs*/
 		var thanhToanChuyenKhoan = true; /*sử dụng thanh toán chuyển khoản*/
@@ -70,22 +55,25 @@
 		var fromViaPostalConfig = false; /*check xác nhận là hồ sơ nhận qua bưu chính*/
 		var activePdfEditor = false; /*sử dụng chức năng ghi chú trên tài liệu Pdf*/
 		var viTriLuuTru = false; /*sử dụng chức năng vị trí lưu trữ hồ sơ*/
+		var levelNameMapping = {
+			2: 'Mức độ 2',
+			3: 'DVCTT một phần',
+			4: 'DVCTT toàn trình'
+		}
 	</script>
 	<!-- end -->
-	<!-- Chatbot -->
-	<script type="text/javascript">(function () {var meta = document.createElement("meta");meta.name = "viewport";meta.content = "width=device-width, initial-scale=1";document.getElementsByTagName("head")[0].appendChild(meta);var a = document.createElement("script");a.async = !0;a.type = "text/javascript";a.id="platform-script";a.setAttribute("data-bid","61eac907bf9aad6c8634e9d1");a.setAttribute("data-appName","web");a.src = "https://cyberbot.vn/js/apps/chatbox/chatbox.botplatform.js";var b = document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a, b) })();</script>
-	<!--  -->
+	
 	<base href="/">
 
 	<@liferay_util["include"] page=top_head_include />
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=vietnamese" rel="stylesheet">
-
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8888" rel="stylesheet" type="text/css">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888" rel="stylesheet" type="text/css">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="stylesheet">
+	<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=vietnamese" rel="stylesheet"> -->
+	
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8888141" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=888148" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 	<script>
         window.__define = window.define;
@@ -95,19 +83,19 @@
     </script>
     
 	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js?t=9812412312"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js?t=9812412312"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js?t=9812412312"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/custom.js?t=100"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js?t=9812412312" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js?t=9812412312" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js?t=8312312" defer></script>
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js?t=31412321"></script> -->
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/custom.js?t=100" defer></script> -->
 	
 	<script>
         window.define = window.__define;
@@ -139,19 +127,20 @@
 	<header id="banner" class="row">
 		<div class="container">
 			<div class="mLogo align-middle"> 
-				<a href="${site_default_url}"> 
-					<img src="${themeDisplay.getPathThemeRoot()}/images/color_schemes/${img_logo}"> 
+				<a aria-label="Trang chủ" href="${site_default_url}"> 
+					<img alt="Dịch vụ công Bộ Giao thông vận tải" src="${themeDisplay.getPathThemeRoot()}/images/color_schemes/${img_logo}"> 
 					<div class="text-logo"> 
 						Bộ Giao thông Vận tải
 						<br/>
 						<span>Cổng dịch vụ công và hệ thống thông tin một cửa điện tử</span>
 					</div> 
+					<!-- <img style="width: 750px; height: 100px" src="${themeDisplay.getPathThemeRoot()}/images/color_schemes/${img_bg_banner}?t=938123123123"> -->
 				</a> 
 			</div>
 
 			<div class="signed-out-actions">
-				<a href="/web/cong-dich-vu-cong/login_dichvucong#/login-dvc" class="btn-login">Đăng nhập</a>
-				<a href="/web/cong-dich-vu-cong/register#/" class="btn-register">Đăng ký</a>
+				<a aria-label="Đăng nhập" href="/web/cong-dich-vu-cong/login_dichvucong#/login-dvc" class="btn-login">Đăng nhập</a>
+				<a aria-label="Đăng ký" href="/web/cong-dich-vu-cong/register#/" class="btn-register">Đăng ký</a>
 			</div>
 			
 			<div id="react-root" style="float: right;width: 100%;height: 71px;">
@@ -212,7 +201,7 @@
 				<span>Fax: (024) 3.822.1066</span>
 				<span>Email: bophanhotro@mt.gov.vn</span>
 			</div>
-			<a href="" class="" style="width: 34px;
+			<a href="" class="" aria-label="Dịch vụ công" style="width: 34px;
 			height: 34px;
 			text-align: left;
 			line-height: 34px;"></a>
@@ -222,21 +211,42 @@
 		</div>
 	</footer>
 
-	<a href="" class="btt"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-	<a href="/" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a>
+	<!-- <a href="" class="btt"><i class="fa fa-chevron-up" aria-hidden="true"></i></a> -->
+	<!-- <a href="/" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a> -->
 
 <!-- inject:js -->
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js"></script>
-	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=9314123123"></script>
+	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=9314123123"></script>
 	<#if permissionChecker.isOmniadmin()>
 		<@liferay_util["include"] page=body_bottom_include />
 		<@liferay_util["include"] page=bottom_include />
 	</#if>
 <!-- endinject -->
-<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf.js?t=9991"></script>
-<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf-table-extractor.js?t=9991"></script>
-<script src="https://sp.zalo.me/plugins/sdk.js"></script>
-
+<!-- <script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf.js?t=9991"></script>
+<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf-table-extractor.js?t=9991"></script> -->
+<!-- <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
+	<!-- Begin Gov Tracking Code -->
+    <script type="text/javascript">
+        var _govaq = window._govaq || [];
+    _govaq.push(['trackPageView']);
+    _govaq.push(['enableLinkTracking']);
+    (function () {
+        _govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
+        _govaq.push(['setSiteId', '47']);
+        var d = document,
+            g = d.createElement('script'),
+            s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+    </script>
+	<!-- End Gov Tracking Code -->
+	<!-- Chatbot -->
+	<script type="text/javascript">(function () {var meta = document.createElement("meta");meta.name = "viewport";meta.content = "width=device-width, initial-scale=1";document.getElementsByTagName("head")[0].appendChild(meta);var a = document.createElement("script");a.async = !0;a.type = "text/javascript";a.id="platform-script";a.setAttribute("data-bid","61eac907bf9aad6c8634e9d1");a.setAttribute("data-appName","web");a.src = "https://cyberbot.vn/js/apps/chatbox/chatbox.botplatform.js";var b = document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a, b) })();</script>
+	<!--  -->
 	<script>
 		$(document).ready(function() {
 			$("#navigation .nav-toggle").on('click', function(e) {
@@ -266,7 +276,7 @@
 	</script>
 
 <script type="text/javascript">
-	window.PDFJS.workerSrc = '${themeDisplay.getPathThemeRoot()}/js/pdf.worker.js?t=9991';
+	// window.PDFJS.workerSrc = '${themeDisplay.getPathThemeRoot()}/js/pdf.worker.js?t=9991';
 	    $.ajaxSetup({
 			headers: {"Token": Liferay.authToken},
 			global: true
@@ -275,6 +285,9 @@
 
 </body>
 	<style>
+		.bg-gif-register {
+			background: url(https://dichvucong.mt.gov.vn/o/kiemthuduongbo-theme/images/bg-gif-register.gif) center center / contain no-repeat !important;
+		}
 		.counter-up-down {
 			width: 100px;
 			display: inline-block;
@@ -720,55 +733,75 @@ body #react-root > div > div {
 		
 		
 		
+	#navigation .nav-toggle {
+		display: none;
+	}
+	
+	@media screen and (max-width: 767px) {
 		#navigation .nav-toggle {
+			display: inline-block !important;
+			color: white;
+			border: 1px solid white;
+			padding: 3px 10px;
+			margin: 8px 0;
+			border-radius: 4px;
+			margin-left: 15px;
+		}
+		body #navigation > ul {
 			display: none;
+			margin: 0 -15px;
+			border-top: 1px solid white;
+			background-color: #f1f8fb;
 		}
-		
-		@media screen and (max-width: 767px) {
-			#navigation .nav-toggle {
-				display: inline-block;
-				color: white;
-				border: 1px solid white;
-				padding: 3px 10px;
-				margin: 8px 0;
-				border-radius: 4px;
-				margin-left: 15px;
-			}
-			body #navigation > ul {
-				display: none;
-				margin: 0 -15px;
-				border-top: 1px solid white;
-				background-color: #f1f8fb;
-			}
-			body #navigation > ul li {
-				float: none;
-				width: 100%;
-			}
-			body #navigation > ul li a {
-				color: #0054a6;
-			}
-			.page-theme #banner .signed-out-actions {
-				top: 94px;
-				right: 15px;
-				font-size: 12px;
-			}
-			.page-theme #banner .signed-out-actions a.btn-login:before {
-				border-top: 29px solid #00aeef;
-			}
-			.page-theme #banner .signed-out-actions a.btn-register:before {
-				border-bottom: 29px solid #f26522;
-			}
-			.login_wrap_app_panel {
-				margin: 73px 0 0 0 !important;
-			}
-			.login_wrap_app_panel .blue--text.text--darken-3 {
-				color: white !Important;
-			}
+		body #navigation > ul li {
+			float: none;
+			width: 100%;
 		}
-		
-		iframe#botplatform_iframe {
-			width: 300px !important;
+		body #navigation > ul li a {
+			color: #0054a6;
 		}
+		.page-theme #banner .signed-out-actions {
+			top: 94px;
+			right: 15px;
+			font-size: 12px;
+		}
+		.page-theme #banner .signed-out-actions a.btn-login:before {
+			border-top: 29px solid #00aeef;
+		}
+		.page-theme #banner .signed-out-actions a.btn-register:before {
+			border-bottom: 29px solid #f26522;
+		}
+		.login_wrap_app_panel {
+			margin: 73px 0 0 0 !important;
+		}
+		.login_wrap_app_panel .blue--text.text--darken-3 {
+			color: white !Important;
+		}
+	}
+	
+	iframe#botplatform_iframe {
+		width: 300px !important;
+	}
+	#form-crud .v-input:not(.v-input--checkbox):not(.v-input--radio-group) .v-input__slot, #form-search .v-input:not(.v-input--checkbox):not(.v-input--radio-group) .v-input__slot {
+		border: 1px solid #d7d7d7;
+	}
+	#form-crud .v-input--radio-group label, #form-search .v-input--radio-group label {
+		opacity: 1;
+		color: #000;
+	}
+	#form-crud .v-autocomplete__content .v-select-list .v-list__tile, #form-search .v-autocomplete__content .v-select-list .v-list__tile {
+		height: auto !important;
+		min-height: 36px !important;
+	}
+	#form-crud .v-autocomplete__content .v-select-list .v-list__tile, #form-search .v-autocomplete__content .v-select-list .v-list__tile {
+		display: block !important;
+		padding-top: 8px !important;
+		padding-bottom: 8px !important;
+	}
+	.yhy-append-wrap img{ 
+		width: 16px;
+		height: 13px;
+	}
 </style>
 	<script type="text/javascript">
 	    $.ajaxSetup({

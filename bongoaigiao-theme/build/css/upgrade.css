@@ -524,3 +524,7 @@ body .v-dialog .v-toolbar .v-toolbar__content {
 #navigation.nav-fixed-top {
     position: relative !important;
 }
+
+.ltr .column, .rtl .column-last {
+    float: none !important;
+}

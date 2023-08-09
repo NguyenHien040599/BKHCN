@@ -36,7 +36,8 @@
 	<script src="/o/vue-admin/js/alpaca.min.js"></script>
 	<script src="/o/vue-admin/js/select2.min.js"></script>
 
-    <script>var cauHinhTruyCapCsdlDanCu=true; var traCuuLgspCongDan = true; var systemLgspConfig = "BO-GTVT" </script>
+    <!-- <script>var cauHinhTruyCapCsdlDanCu=true; var traCuuLgspCongDan = true; var systemLgspConfig = "BO-GTVT" </script> -->
+	<script>var cauHinhAtmHoSo = true; </script>
 	<script>
         window.define = window.__define;
         window.require = window.__require;

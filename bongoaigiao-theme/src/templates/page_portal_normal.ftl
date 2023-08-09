@@ -8,16 +8,20 @@
 	<title>${site_title}</title>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-	
+	<meta name="description" content="Cổng Dịch vụ công Bộ Ngoại giao cung cấp toàn bộ thông tin về thủ tục hành chính, thực hiện và giải quyết thủ tục hành chính trực tuyến...">
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
-
+	<link rel="preload" href="/o/bongoaigiao-theme/images/logo-dvc.png" as="image">
+	<link rel="preload" href="/o/opencps-store/js/cli/login/app/image/img_login.png" as="image">
+	<link rel="preload" href="/o/opencps-store/js/cli/dvc/app/image/logo-viettel-ca.png" as="image">
+	<link rel="preload" href="/o/opencps-store/js/cli/dvc/app/image/logo-kyso-bancoyeu.png" as="image">
+	<link rel="preload" href="/o/opencps-store/js/cli/dvc/app/image/logo-vnpt-ca.svg" as="image">
 	<@liferay_util["include"] page=top_head_include />
 	
 	<base href="/">
 	<!--<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888" rel="stylesheet" type="text/css">-->
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8888" rel="stylesheet" type="text/css">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=212899837" rel="stylesheet">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8888" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=212899833337" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 	<script>
         window.__define = window.define;
@@ -27,19 +31,19 @@
     </script>
 	
 	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js?t=9831412313"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js?t=9831412313"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/select2-full.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=02032022"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/handlebars.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/alpaca.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment-with-locales.min.js?t=9831412313" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/bootstrap-datetimepicker.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/moment.min.js?t=9831412313" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/select2-full.min.js" defer></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js" defer></script>
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js" defer></script> -->
+	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js" defer></script>
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js" defer></script> -->
+	<!-- <script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"  defer></script> -->
+	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js?t=02032022" defer></script>
 	<!--<script src="https://sp.zalo.me/plugins/sdk.js"></script>-->
 	
 	<script>
@@ -74,14 +78,14 @@
 		<header id="banner">
 			<div class="container">
 				<a href="${site_default_url}" class="mLogo"> 
-					<img src="${themeDisplay.getPathThemeRoot()}/images/${logo_img}">
+					<img src="${themeDisplay.getPathThemeRoot()}/images/${logo_img}" alt="Dịch vụ công Bộ Ngoại giao">
 				</a>
-				<div id="react-root" style="">
+				<div id="react-root">
 					<div id="app_login"></div>
 				</div>
-				<a href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky#/login-dichvucong" class="btn-banner btn-login-motcua">Đăng nhập</a>
-				<a href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky#/login-dichvucong" class="btn-banner btn-login-dvc">Đăng nhập</a>
-				<a href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky" class="btn-banner btn-register-dvc">Đăng ký</a>
+				<a aria-label="Đăng nhập" href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky#/login-dichvucong" class="btn-banner btn-login-motcua">Đăng nhập</a>
+				<a aria-label="Đăng nhập" href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky#/login-dichvucong" class="btn-banner btn-login-dvc">Đăng nhập</a>
+				<a aria-label="Đăng ký" href="/web/cong-dich-vu-cong-bo-ngoai-giao/dang-ky" class="btn-banner btn-register-dvc">Đăng ký</a>
 			</div>
 		</header>
 		
@@ -114,8 +118,8 @@
 		</footer>
 	</div>
 	
-	<a href="" class="btt"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-	<a href="https://dichvucong.mofa.gov.vn" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a>
+	<a aria-label="DVC" href="" class="btt"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+	<a aria-label="Trang chủ" href="https://dichvucong.mofa.gov.vn" class="bth"><i class="fa fa-home" aria-hidden="true"></i></a>
 		
 	<!-- inject:js -->
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=3124123123"></script>
@@ -125,8 +129,8 @@
 		<@liferay_util["include"] page=bottom_include />
 	</#if>
 	<!-- endinject -->
-	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf.js?t=9991"></script>
-	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf-table-extractor.js?t=9991"></script>
+	<!-- <script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf.js?t=9991"></script>
+	<script type="text/javascript" src="${themeDisplay.getPathThemeRoot()}/js/pdf-table-extractor.js?t=9991"></script> -->
 
 	<script type="text/javascript">		
 		$(document).ready(function() {
@@ -642,6 +646,9 @@
 			.log-reg {
 				display: flex;
 			}
+		}
+		.login_wrap_app_panel .username-login {
+			color: #1565c0!important;
 		}
 	</style>
 	

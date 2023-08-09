@@ -9,19 +9,25 @@
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	
+	<meta name="description" content="Cổng Dịch vụ công Bộ Xây dựng cung cấp toàn bộ thông tin về thủ tục hành chính, thực hiện và giải quyết thủ tục hành chính trực tuyến...">
 	<link rel="Shortcut Icon" href="${themeDisplay.getPathThemeRoot()}/images/favicon.ico">
+	<link rel="preload" href="/o/boxaydung-theme/images/image-004-removebg-preview.png" as="image">
+	<link rel="preload" href="/o/boxaydung-theme/images/slide-2.webp" as="image">
+	<link rel="preload" href="/o/boxaydung-theme/images/slide-3.webp" as="image">
+	<link rel="preload" href="/o/boxaydung-theme/images/manual-step.webp" as="image">
+	<link rel="preload" href="/o/boxaydung-theme/images/bg.png" as="image">
+	<link rel="preload" href="/o/boxaydung-theme/images/slide-4.webp" as="image">
 	
 	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=vietnamese" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="stylesheet">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 	<@liferay_util["include"] page=top_head_include />
 	
 	<base href="/">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=6316777613123777" rel="stylesheet" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=6316777613123777" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
 	
 	<script>
         window.__define = window.define;
@@ -40,25 +46,7 @@
         window.__require = undefined;
     </script>
 	
-	<!-- Begin EMC Tracking Code -->
-    <script type="text/javascript">
-        var _govaq = window._govaq || [];
-		_govaq.push(['trackPageView']);
-		_govaq.push(['enableLinkTracking']);
-		(function () {
-			_govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
-			_govaq.push(['setSiteId', '227']);
-			var d = document,
-				g = d.createElement('script'),
-				s = d.getElementsByTagName('script')[0];
-			g.type = 'text/javascript';
-			g.async = true;
-			g.defer = true;
-			g.src = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
-			s.parentNode.insertBefore(g, s);
-		})();
-		</script>
-	<!-- End EMC Tracking Code -->
+	
 
 </head>
 
@@ -86,10 +74,10 @@
 				<#include "${full_templates_path}/navigation.ftl" />
 			</#if>
 			<div class="btns">
-				<a href="/web/cong-dich-vu-cong/dang-nhap-dvcqg" class="login">Đăng nhập qua Cổng DVC Quốc gia</a>
-				<a href="/web/cong-dich-vu-cong/register#/login" class="login">Đăng nhập</a>
+				<a href="/web/cong-dich-vu-cong/dang-nhap-dvcqg" class="login" aria-label="Trang chủ">Đăng nhập qua Cổng DVC Quốc gia</a>
+				<a href="/web/cong-dich-vu-cong/register#/login" class="login" aria-label="Trang chủ">Đăng nhập</a>
 				<!-- <a href="javascript:;" onclick="luaChonDangNhap()" class="login">Đăng nhập</a> -->
-				<a href="/web/cong-dich-vu-cong/register" class="register">Đăng ký</a>
+				<a href="/web/cong-dich-vu-cong/register" class="register" aria-label="Trang chủ">Đăng ký</a>
 			</div>
 			<div id="react-root" style="float: right;height: 71px;">
 				<div id="app_login"></div>
@@ -452,6 +440,25 @@
 		});
 		// 
 	</script>
+	<!-- Begin EMC Tracking Code -->
+    <script type="text/javascript">
+        var _govaq = window._govaq || [];
+		_govaq.push(['trackPageView']);
+		_govaq.push(['enableLinkTracking']);
+		(function () {
+			_govaq.push(['setTrackerUrl', 'https://f-emc.ngsp.gov.vn/tracking']);
+			_govaq.push(['setSiteId', '227']);
+			var d = document,
+				g = d.createElement('script'),
+				s = d.getElementsByTagName('script')[0];
+			g.type = 'text/javascript';
+			g.async = true;
+			g.defer = true;
+			g.src = 'https://f-emc.ngsp.gov.vn/embed/gov-tracking.min.js';
+			s.parentNode.insertBefore(g, s);
+		})();
+		</script>
+	<!-- End EMC Tracking Code -->
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/chunk-vendors.js?t=931241231"></script>
 	<script type="text/javascript" src="/o/opencps-store/js/cli/login/app/js/app.js?t=931241231"></script>
 

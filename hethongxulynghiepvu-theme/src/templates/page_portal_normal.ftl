@@ -19,11 +19,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=vietnamese" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&amp;subset=vietnamese" rel="stylesheet">
 
-	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=8888" rel="stylesheet" type="text/css">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=8888" rel="stylesheet" type="text/css">
-	<link href="${themeDisplay.getPathThemeRoot()}/css/color_schemes/${theme_color_id}.css?t=911" rel="stylesheet" type="text/css">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=123321" rel="stylesheet">
-	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=789987" rel="stylesheet">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/main.css?t=88818" rel="stylesheet" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/base-style.css?t=831238831128" rel="stylesheet" type="text/css">
+	<link href="${themeDisplay.getPathThemeRoot()}/css/color_schemes/${theme_color_id}.css?t=9111" rel="stylesheet" type="text/css">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/chunk-vendors.css?t=1233121" rel="stylesheet">
+	<link type="text/css" href="${themeDisplay.getPathThemeRoot()}/css/upgrade.css?t=7899187" rel="stylesheet">
 
 	<script>
         window.__define = window.define;
@@ -42,8 +42,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery-comments.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/jquery.textcomplete.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js"></script>
-	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/date-time-picker.js?t=39124123123"></script>
+	<script src="${themeDisplay.getPathThemeRoot()}/js/mermaid.js?t=39124123123"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/vgcaplugin.js"></script>
 	<script src="${themeDisplay.getPathThemeRoot()}/js/svg-pan-zoom.min.js"></script>
 	
@@ -103,6 +103,7 @@
 		var defaultCityCode = false; /*set cityCode mặc định ex: 87 (Đồng Tháp)*/
 		var defaultCityName = false; /*set cityName mặc định ex: 'Tỉnh Đồng Tháp' (Đồng Tháp)*/
 		var khoTaiLieuCongDan = true; /*sử dụng kho tài liệu công dân*/
+		var khoTaiLieuTapTrung = true;
 		var showKySoDvc = false; /*sử dụng ký số phía cổng DVC*/
 		var hasPreviewSync = false; /*in tiến trình xử lý hs*/
 		var thanhToanChuyenKhoan = true; /*sử dụng thanh toán chuyển khoản*/
@@ -118,7 +119,7 @@
 		var doActionGroupNew = true;
 		var traCuuLgspCongDan = true;
 		var systemLgspConfig = "BO-GTVT";
-		var checkThuTucTraCuuCsdlConfig = true;
+		var checkThuTucTraCuuCsdlConfig = false;
 		var showKySoMotCua = true
 	</script>
 	<!-- end -->
@@ -146,13 +147,13 @@
 	<header id="banner" class="row">
 		<div class="mLogo align-middle"> 
 			<a href="${site_default_url}"> 
-				<img src="${themeDisplay.getPathThemeRoot()}/images/color_schemes/${img_logo}"> 
+				<!-- <img src="${themeDisplay.getPathThemeRoot()}/images/color_schemes/${img_logo}"> 
 				<div class="text-logo"> 
 					Bộ Giao thông Vận tải
 					<br/>
-					<span>Hệ thống thông tin một cửa điện tử<!-- - ${system}--></span>
-					<!--<span>Hệ thống nghiệp vụ xử lý thủ tục hành chính - ${system}</span>-->
-				</div> 
+					<span>Hệ thống thông tin một cửa điện tử</span>
+				</div>  -->
+				<img style="width: 700px; height: 100px" src="${themeDisplay.getPathThemeRoot()}/images/color_schemes/${img_bg_banner}">
 			</a> 
 		</div>
 		
@@ -769,6 +770,18 @@ body #react-root > div > div {
 	}
 	body .bootstrap-datetimepicker-widget table th, body .bootstrap-datetimepicker-widget table td {
 		padding: 5px;
+	}
+	#form-crud .v-input__slot, #form-search .v-input__slot {
+		border: 1px solid #d7d7d7;
+	}
+	#form-crud .v-autocomplete__content .v-select-list .v-list__tile, #form-search .v-autocomplete__content .v-select-list .v-list__tile {
+		height: auto !important;
+		min-height: 36px !important;
+	}
+	#form-crud .v-autocomplete__content .v-select-list .v-list__tile, #form-search .v-autocomplete__content .v-select-list .v-list__tile {
+		display: block !important;
+		padding-top: 8px !important;
+		padding-bottom: 8px !important;
 	}
 	</style>
 

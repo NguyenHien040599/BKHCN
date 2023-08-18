@@ -1,5 +1,8 @@
 <nav class="${nav_css_class}" id="navigation">
-	<a href="#" class="nav-toggle"><i class="fa fa-bars"></i></a>
+	<div class="wrapp-icon-bar-mobile">
+       <p>Danh mục</p>
+	   <a href="#" class="nav-toggle"><i class="fa fa-bars"></i></a>
+	</div>
 	<ul class="menubar" aria-label="<@liferay.language key="site-pages" />" role="menubar">
 		<#list nav_items as nav_item>
 			<#assign
@@ -25,7 +28,7 @@
 								nav_child_css_class = ""
 							/>
 
-							<#if nav_item.isSelected()>
+							<#if nav_item.isSelected()> 
 								<#assign
 									nav_child_css_class = "selected"
 								/>

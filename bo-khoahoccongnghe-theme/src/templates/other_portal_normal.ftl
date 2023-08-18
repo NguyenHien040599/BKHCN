@@ -449,6 +449,7 @@
 		.login_wrap_app_panel {
 			max-width: 100% !important;
 		}
+
 	</style>
 </body>
 
